@@ -35,8 +35,7 @@ a {
 .tab-style-2 .nav > li > a.active,
 .tab-style-2 .nav > li > a:hover,
 .m-btn-theme:hover,
-.m-btn-t-theme,
-.theme-color {
+.m-btn-t-theme {
   color:#FFFFFF;
   border: none;
   background-color: #004ddb!important;

@@ -1,17 +1,22 @@
 /*----------------------------------
 Table of contents
-01. Common
-02. Section title
-03. Buttons
-04. Page Title
-05. Header
-06. Home Banner
-07. Box
-08. Feature Box
-09. Tabs
-10. Parallax Section
-11. About us Section
-12. Footer
+/*---------------------------------
+	01. Common
+	02. Section title
+	03. Buttons
+	04. Page Title
+	05. Header
+	06. Home Banner
+	07. Box
+	08. Feature Box
+	09. Tabs
+	10. Parallax Section
+	11. About us Section
+	12. What We Offer
+	13. Clients
+	14. FAQ
+	15. Contact
+	16. Footer
 ----------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
@@ -160,9 +165,9 @@ img {
   color: #233D63;
 }
 
-/*-----------------------------------------
+/*---------------------------------
 * 03. Buttons
------------------------------------------*/
+-----------------------------------*/
 .m-btn {
   padding: 10px 30px;
   border: 1px solid;
@@ -213,17 +218,17 @@ img {
 * 04. Page Title
 -----------------------------------*/
 .page-title-section {
-  padding: 130px 0 40px;
+  padding: 200px 0 80px;
 }
 
 .page-title h1 {
   color: #fff;
   margin: 0 0 10px;
-  font-size: 26px;
+  font-size: 36px;
 }
 .page-title p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
   margin-bottom: 20px;
 }
 
@@ -466,9 +471,9 @@ img {
 
 
 
-/*-----------------------------------------
+/*---------------------------------
 *  07. Box
------------------------------------------*/
+-----------------------------------*/
 .box{
 	padding: 15px;
 	border-radius: 8px;
@@ -614,9 +619,9 @@ img {
 
 
 
-/*-----------------------------------------
+/*---------------------------------
 *  08. Feature Box
------------------------------------------*/
+-----------------------------------*/
 .feature-box {
   text-align: center;
   box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, 0.1);
@@ -856,9 +861,10 @@ img {
   line-height: 20px;  
 }
 
-/*-----------------------------------------
+
+/*---------------------------------
 *  09. Tabs
------------------------------------------*/
+-----------------------------------*/
 .tab-style-1 .nav {
   border-bottom: 1px solid rgba(255,255,255,0.3);
 }
@@ -921,9 +927,10 @@ img {
   margin: 0;
 }
 
-/*-----------------------------------------
+
+/*---------------------------------
 *  10. Parallax Section
------------------------------------------*/
+-----------------------------------*/
 .parallax {
     background-attachment: fixed;
     background-image: url(../images/success-stories.jpg);
@@ -963,9 +970,9 @@ img {
 }
 
 
-/*-----------------------------------------
+/*---------------------------------
 *  11. About us Section
------------------------------------------*/
+-----------------------------------*/
 .aboutus-section {
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -987,9 +994,11 @@ img {
 }
 .parallax-content-02 p {font-size:17px;}
 
-/*-----------------------------------------
+
+
+/*---------------------------------
 *  12. What We Offer
------------------------------------------*/
+-----------------------------------*/
 .what-we-offer-cards {
     background-color: #fff;
     border-radius: 7px;
@@ -1032,8 +1041,299 @@ img {
 .clients-list:hover img {-webkit-filter: grayscale(0); filter: grayscale(0);}
 
 
+
+/*-----------------------------------
+* 14. FAQ 
+-----------------------------------*/
+
+.faq-section {
+  padding: 120px 0;
+}
+
+.faq-section .qs-answer-section {
+  padding-bottom: 0;
+}
+
+.bg-offwhite {
+  background-color: #f5f8f9;
+}
+
+.accordion .accordion-header button {
+  text-align: left;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #009efd;
+  border: none;
+  padding: 12px 0 12px 40px;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+
+.accordion .accordion-header button.collapsed {
+  color: #003a49;
+}
+
+.accordion .accordion-header button:before {
+  content: '\f106';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 2.2rem;
+  line-height: inherit;
+  padding: 12px 0;
+  text-align: left;
+  color: #009efd;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.accordion .accordion-header button.collapsed:before {
+  content: '\f107';
+}
+
+.accordion-body {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 0 25px 40px;
+}
+
+.accordion-body p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.list-group {
+    border-radius: .50rem;
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, .1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, .1);
+    -o-box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, .1);
+    box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, .1);
+}
+
+.list-group-item {
+  border: none;
+  padding: 15px 20px!important;
+  /*margin-left: -1px;*/
+  background-color: #FFFFFF;
+  position: relative;
+  border: 1px solid #e7eaf3;
+  transition: all 0.5s ease 0s;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: .50rem;
+    border-top-right-radius: .50rem;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: .50rem;
+    border-bottom-right-radius: .50rem;
+}
+
+.list-group-item:hover h5 {
+  color: #3498db;
+}
+
+.list-group-item.active {
+  color: #FFFFFF;
+  background-color: #3498db;
+}
+
+.list-group-item.active:hover {
+  color: #FFFFFF;
+  background-color: #004ddb;
+}
+
+.list-group-item:before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: #004ddb;
+  position: absolute;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.list-group-item.active:before {
+  width: 5px;
+}
+
+.list-group-item:first-child:before {
+  border-top-left-radius: .50rem;
+}
+
+.list-group-item:last-child:before {
+  border-bottom-left-radius: .50rem;
+}
+
+.list-group-item+.list-group-item {
+  margin-top: 0px;
+}
+
+.list-group-item h5 {
+  font-weight: 500;
+  color: #0b132d;
+  font-size: 14px;
+  margin: 0;
+}
+
+.list-group-item.active h5 {
+  color: #FFFFFF;
+}
+
+.list-group-item span {
+  font-size: 12px!important;
+  color: #5f5f5f;
+}
+
+.list-group-item.active span {
+  color: rgba(255,255,255,0.8);
+}
+
+.tab-pane>h4 {
+  font-size: 22px;
+  color: #0b132d;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.accordion.style-2 .accordion-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.accordion.style-2 .accordion-header button {
+  font-weight: 500;
+  color: #0b132d;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 15px 30px 15px 0;
+  width: 100%;
+  position: relative;
+}
+
+.accordion.style-2 .accordion-header button:focus,
+.accordion.style-2 .accordion-header button:active:focus {
+  outline: none;
+}
+
+.accordion.style-2 .accordion-header button:before {
+  content: none;
+}
+
+.accordion.style-2 .accordion-header button:after {
+  content: "\f106";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 23px;
+  width: 25px;
+  text-align: center;
+  height: 25px;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.accordion.style-2 .accordion-header button.collapsed:after {
+  content: "\f078";
+}
+
+.accordion.style-2 .accordion-body {
+  padding-left: 0;
+}
+
+
+
 /*---------------------------------
-* 14. Footer
+* 15. Contact
+-----------------------------------*/
+.tab-content-contactFrm {
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+    padding: 35px 25px;
+    -webkit-box-shadow: 0px 3px 10px 1px rgba(38, 59, 94, .1);
+    -moz-box-shadow: 0px 3px 10px 1px rgba(38, 59, 94, .1);
+    -o-box-shadow: 0px 3px 10px 1px rgba(38, 59, 94, .1);
+    box-shadow: 0px 3px 10px 1px rgba(38, 59, 94, .1);
+}
+.contact-form-wrap .form-control {
+    margin-bottom: 1rem;
+}
+.contact-form-wrap .form-group {
+    margin-bottom: 0px;
+}
+.contact-form-wrap input, .contact-form-wrap select, .contact-form-wrap textarea {
+    font-size: 13px;
+	border: 1px solid #eee;
+    border-radius: 4px !important;
+    width: 100%;
+    background-color: #fbfbfb;
+    box-shadow: none !important;
+    height: 45px;
+    color: #6c757d;
+    transition: all .3s ease-in-out;
+}
+.contact-form-wrap textarea {
+    height: 100px;
+    resize: none;
+}
+
+.tab-style-2 .nav {
+  /*border-bottom: 2px solid #e5e8ed;*/
+}
+
+.tab-style-2 .nav > li > a {
+  /*padding: 10px 8px;
+  margin: 0 20px;*/
+  font-weight: 500;  
+  border-bottom-width: 1px;
+  display: block;
+  color: #637097;
+  font-size: 16px;
+  position: relative;
+  line-height: normal;
+  background-color: #f0f0f1 !important;  
+}
+.tab-style-2 .nav > li {margin-right: 2px;}
+.tab-style-2 .nav > li:last-child {margin-right: 0px;}
+
+
+.tab-style-2 .nav > li > a:hover:after {
+  width: 100%;
+}
+
+.tab-style-2 .nav > li > a.active:after {
+  width: 100%;  
+}
+
+.tab-style-2 .nav-tabs .nav-link {border:none;}
+
+.tab-style-2 .nav-link {padding: .7rem 1rem;}
+
+.tab-style-2 .nav-tabs .nav-item {margin-bottom: -7px;}
+
+
+.contact-us-support-wrap{padding-left:20px;margin-top:60px}.contact-us-spprt-txt h2{font-size:26px;font-weight:400;color:#233D63;margin-bottom:15px}.contact-us-spprt-txt p{font-size:15px;font-weight:400;color:#637097;margin-bottom:20px}.contact-us-support-links-wrap a{padding:20px 0;border-bottom:1px solid #e3e4f1;display:block;position:relative;margin-top:10px;padding-right:25px}.contact-us-support-links-wrap a h3{margin:0 0 10px;font-size:16px;font-weight:600;color:#637097;transition:all .3s ease-in-out}.contact-us-support-links-wrap a p{font-size:15px;color:#637097;transition:all .3s ease-in-out;margin:0}.contact-us-support-links-wrap a i{font-size:30px;position:absolute;top:0;bottom:0;right:10px;height:30px;margin:auto;transition:all .3s ease-in-out;color:rgba(66,82,110,.5)}.contact-us-support-links-wrap a:hover h3,.contact-us-support-links-wrap a:hover p,.contact-us-support-links-wrap a:hover i{right:0;color:#2e39bf;}.contact-us-support-links-wrap a:hover {text-decoration:none!important;}
+
+@media(max-width:992px){.contact-us-spprt-txt{text-align:left}}
+@media(max-width:767px){.contact-us-support-wrap{padding:0}.tab-style-2 .nav-link {padding: .7rem 0.5rem;font-size:13px;}}
+
+
+/*---------------------------------
+* 16. Footer
 -----------------------------------*/
 .footer {
   background: #1f1f1f;
@@ -3518,3 +3818,5 @@ img {
   .sm-p-25-b {padding-bottom: 25%;}
   .sm-p-25-half-b {padding-bottom: 25.5%;}
 }
+
+

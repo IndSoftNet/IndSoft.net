@@ -29,6 +29,29 @@ a {
 .m-btn-theme,
 .theme-bg {
   background:#f8c222;
+  transition: all 0.5s ease;
+}
+
+.tab-style-2 .nav > li > a.active,
+.tab-style-2 .nav > li > a:hover,
+.m-btn-theme:hover,
+.m-btn-t-theme {
+  color:#FFFFFF;
+  border: none;
+  background-color: #004ddb!important;
+  transition: all 0.5s ease;
+  padding: 14px 5px;
+  transform: translate(0,-6px);
+}
+
+
+.tab-style-2 .nav > li > a:after,
+.m-btn-t-theme:hover,
+.theme-after-bg:after,
+.m-btn-theme,
+.theme-bg {
+  background:#f8c222;
+  transition: all 0.5s ease;
 }
 
 .m-btn-theme,

@@ -133,37 +133,37 @@
                                     <p>Note: Please note that this inquiry form is solely for the purpose of sales inquiries, and not for any technical support.</p>
 
                                     <!-- Contact form 1 -->
-                                    <form>
+                                    <form id="sales" name="sales" action="send.php" method="POST">
                                         <div class="row form-group">
                                             <div class="col-lg-6 col-12">
-                                                <input type="text" name="your-name" class="form-control" placeholder="Your Name">
+                                                <input type="text" id="your-name" name="your-name" class="form-control" placeholder="Your Name">
                                             </div>
                                             <div class="col-lg-6 col-12">
-                                                <input type="email" name="your-email" class="form-control" placeholder="Your Email">
+                                                <input type="email" id="your-email" name="your-email" class="form-control" placeholder="Your Email">
                                             </div>
                                         </div>
 
                                         <div class="row form-group">
                                             <div class="col-lg-6 col-12">
-                                                <input type="text" name="your-phone" class="form-control" placeholder="Phone/Skype">
+                                                <input type="text" id="your-phone" name="your-phone" class="form-control" placeholder="Phone/Skype">
                                             </div>
                                             <div class="col-lg-6 col-12">
-                                                <input type="text" name="company-name" class="form-control" placeholder="Company Name">
+                                                <input type="text" id="company-name" name="company-name" class="form-control" placeholder="Company Name">
                                             </div>
                                         </div>
 
                                         <div class="row form-group">
                                             <div class="col-lg-6 col-12">
-                                                <input type="text" name="website" class="form-control" placeholder="Website">
+                                                <input type="text" id="website" name="website" class="form-control" placeholder="Website">
                                             </div>
                                             <div class="col-lg-6 col-12">
-                                                <input type="text" name="pageviews" class="form-control" placeholder="Monthly Pageviews">
+                                                <input type="text" id="pageviews" name="pageviews" class="form-control" placeholder="Monthly Pageviews">
                                             </div>
                                         </div>
 
                                         <div class="row form-group">
                                             <div class="col-12">
-                                                <select name="country" class="form-control" aria-invalid="false">
+                                                <select id="country" name="country" class="form-control" aria-invalid="false">
                                                     <option value="Select Country">Select Country</option>
                                                     <option value="Afghanistan">Afghanistan</option>
                                                     <option value="Albania">Albania</option>
@@ -209,13 +209,13 @@
 
                                         <div class="row form-group">
                                             <div class="col-12">
-                                                <textarea name="your-message" class="form-control" cols="40" rows="5" maxlength="750" placeholder="Please describe your needs and requirements"></textarea>
+                                                <textarea id="your-message" name="your-message" class="form-control" cols="40" rows="5" maxlength="750" placeholder="Please describe your needs and requirements"></textarea>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col">
-                                                <div><a href="#" class="m-btn btn-green" data-text="Free Trial">SUBMIT</a></div>
+                                                <div><button type="submit" id="sales_submit" class="m-btn btn-green">SUBMIT</button></div>
                                             </div>
                                         </div>
 

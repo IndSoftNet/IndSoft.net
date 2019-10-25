@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Indsoft</title>
+    <title>Image</title>
 
     <meta name="author" content="Indsoft">
     <meta name="description" content="Indsoft">
@@ -50,8 +50,7 @@
                 <!-- Navbar Band -->
                 <div class="navbar-brand">
                     <a class="logo-white" href="#"><img src="assets/images/logo-white.png" title="" alt=""></a>
-                    <a class="logo-dark" href="#"><img src="assets/images/logo-dark.png" title="" alt=""></a>
-                </div>
+                    <a class="logo-dark" href="#"><img src="assets/images/logo-dark.png" title="" alt=""></a>                </div>
 
                 <!-- Mobile Toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -217,7 +216,9 @@
                                     </div>
     
                                     <div id="collapse2One" class="collapse" aria-labelledby="heading2One" data-parent="#accordion2Faq">
-                                    <div class="accordion-body">Database Management tool</div>
+                                    <div class="accordion-body">
+                                   	  <p>The Database Management tool allows you to update the database password and quota, monitor the storage usage of your database, backup and restore your databases, and provides an example connection string.</p>
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -227,7 +228,14 @@
                                     </h5>
                                     </div>
                                     <div id="collapse2Two" class="collapse" aria-labelledby="heading2Two" data-parent="#accordion2Faq">
-                                    <div class="accordion-body">How to backup MySQL database using phpMyAdmin</div>
+                                    <div class="accordion-body">
+                               		  <p>First you will need to install and connect phpMyAdmin through the App Installer:<br>
+                                   	    <a href="https://support.winhost.com/kb/a1625/how-to-install-phpmyadmin.aspx">https://support.winhost.com/kb/a1625/how-to-install-phpmyadmin.aspx</a></p>
+                                        <p class="mb-3">Once you have connected, select the database to be backed up from the panel on the left hand side and then click "Export"</p>
+										<img src="assets/images/faqs/phpExport_1.png" class="mb-4">
+                                        <p class="mb-3">On the next screen you can choose either "Quick" or "Custom" if you need to specify certain settings for the backup. Click Go and you will be given the .sql backup file</p>
+										<img src="assets/images/faqs/phpExport_2.png">
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -237,7 +245,24 @@
                                     </h5>
                                     </div>
                                     <div id="collapse2Three" class="collapse" aria-labelledby="heading2Three" data-parent="#accordion2Faq">
-                                    <div class="accordion-body">How to bring your SQL database online</div>
+                                    <div class="accordion-body">
+										<p>If you accidentally bring your SQL database offline and cannot connect to the SQL Server, here's how to bring it back online.</p>
+										<ul>
+											<li>Open Management Studio and in the "Connect to Server" dialog box enter your connection parameters</li>
+											<li>Click the "Options &gt;&gt;" button and navigate to the "Connections Properties" page</li>
+											<li>In the "Connect to database" dialog box type the word <strong>master</strong>.</li><li>Open up a New Query window and paste the following T-SQL code into it:</li>
+										</ul>
+										<pre><code>USE [master] 
+GO  
+
+ALTER DATABASE [DB_123_database] SET ONLINE 
+GO</code></pre>
+										<p>Replace DB_123_database with your actual database (the one you are trying to bring online)</p>
+										<ul>
+											<li>Execute the code</li>
+											<li>If the code executed successfully, but you do not see the change in your database status, disconnect from the server and connect again. This time, you can connect to your default database instead of master.</li>
+										</ul>
+									</div>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +278,11 @@
                                     </div>
     
                                     <div id="collapse3One" class="collapse" aria-labelledby="heading3One" data-parent="#accordion3Faq">
-                                    <div class="accordion-body">Do you support a 2048 bit (or higher) Domain Key (DKIM)?</div>
+                                    <div class="accordion-body">
+										<p>More and more organizations are moving from the shorter 384, 512 and 768-bit keys up to 1024 and higher in order to protect against spoofing because the smaller keys are easier to crack. Our DNS system intuitively supports a 2048-bit key and larger. Simply paste it into the TXT record and hit save. Our back-end systems do what’s needed to break it up into 255 byte chunks to comply with RFC 1035, section 2.3.4 so you don’t have to do anything.</p>
+										<p>You can test your DKIM after creating it using the handy tool here: <a href="http://dkimcore.org/c/keycheck" target="_blank">http://dkimcore.org/c/keycheck</a> This tool will show you how it joins the two parts into one key.</p>
+										<p>If you encounter any issues, please feel free to submit a support ticket. We’re here 24×7 to help!</p>
+									</div>
                                     </div>
                                 </div>
                             </div>
@@ -269,7 +298,40 @@
                                     </div>
     
                                     <div id="collapse4One" class="collapse" aria-labelledby="heading4One" data-parent="#accordion4Faq">
-                                    <div class="accordion-body">Configure SSL/TLS to Secure SmarterMail</div>
+                                    <div class="accordion-body">
+										<p>SSL/TLS are security protocols that allows the transmission of data to be encrypted. This allows users to access email through a third-party email client without the fear that someone has intercepted their data. SSL will encrypt the connection immediately upon connection. TLS will encrypt once the STARTTLS command is sent. TLS will need to be set up over port 25, 110, 143 and SSL over ports 465, 993, and 995.</p>
+										<p><strong><u>NOTE:</u></strong> This article assumes you have obtained a copy of the certificate from your SSL provider and have installed it on your server within your certificate stores personal folder. If you have not done this, please do so prior to following the directions below.</p>
+										<p>Prior to configuring SmarterMail to be secured over SSL or TLS, the SSL certificate installed on the server must first be exported to a PFX file that is password protected and contains the certificates private key information.</p>
+										<p>Follow these steps to export your SSL certificate to a PFX certificate file:</p>
+										<ol>
+											<li>Open up Microsoft Management Console (MMC)</li>
+											<li>CTRL + M to add new Snap In -&gt; Certificates -&gt; Select Local Computer</li>
+											<li>Expand Personal</li>
+											<li>Expand Certificates</li>
+											<li>Right click the Desired Certificate, select All Tasks -&gt; Export</li>
+											<li>In the new window that pops up Hit Next</li>
+											<li>Select Yes, Export the Private Key and hit Next</li>
+											<li>Enter in the desired password and hit next.</li>
+											<li>Ensure Personal Information Exchange -PKCS #12 (PFX) is checked and also include all certificates in the certification path if possible and select next</li>
+											<li>Enter in the path and name where you would like the certificate saved such as C:\SmarterMail\Certificates\mail.domain.com.pfx and click finish.</li>
+										</ol>
+										<p>Follow these steps to add a port to listen over SSL or TLS:</p>
+										<ol>
+											<li>Log in to SmarterMail as the system administrator.</li>
+											<li>Click the <strong>Settings</strong> icon.</li>
+											<li>Click <strong>Bindings</strong> in the navigation pan and click the <strong>Ports tab</strong>.</li>
+											<li>Click <strong>New</strong> in the content pane.</li>
+											<li>Complete the following required fields: Protocol, Encryption (SSL or TLS), Name, Port, Certificate Path and password. All other fields are optional.</li>
+											<li>Select the IP Address for the port to listen on.</li>
+											<li>Click <strong>Save</strong>.</li>
+										</ol>
+										<p><strong><u>NOTE:</u></strong> Using similar steps as above, modify your existing standard ports (25, 110, 143, etc) to be encrypted with SSL or TLS.</p>
+										<p>It is possible to secure the SmarterMail ports for different domains/certificates as well. The ports can be secured in two ways, one requiring a Unified Communications Certificate (UCC) and one method requires a unique IP address for each domain.</p>
+										<ul>
+											<li>For UCC configurations, the certificate can be configured to secure a variety of hostnames within it's SAN field, for example mail.domainA.com, mail.domainB.com, mail.domainC.com, etc. This certificate can then be exported following the instructions above and configured within SmarterMail to secure multiple domains.</li>
+											<li>If there are unique IP addresses assigned for each domain, each domain would need to have their own unique set of ports tied to the proper certificate and IP for the domain in question. For example, the administrator will need to create a set of port mappings for 25 (TLS), 110 (TLS), 143 (TLS), 465 (SSL), 993 (SSL), 995 (SSL), when creating these ports makes sure to add a description to indicate which domain these port mappings belong to and point these ports to the proper certificate location. Next these ports would need to be configured to listen on the IP Address assigned to the domain being configured. This process will need to be repeating for each Domain\IP that needs to be secured for the given domain.</li>
+										</ul>
+									</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -279,7 +341,21 @@
                                     </h5>
                                     </div>
                                     <div id="collapse4Two" class="collapse" aria-labelledby="heading4Two" data-parent="#accordion4Faq">
-                                    <div class="accordion-body">Creating a new email account in webmail.</div>
+                                    <div class="accordion-body">
+										<p class="mb-3"><strong>Creating a new email account in webmail.</strong></p>
+										<p class="mb-3"><strong>Step 1:</strong> Login to your webmail account</p>
+										<img src="assets/images/faqs/new_email_acc_1.jpg" class="mb-4">
+										<p class="mb-3"><strong>Step 2:</strong> Click on the highlighted dropbox menu</p>
+										<img src="assets/images/faqs/new_email_acc_2.jpg" class="mb-4">
+										<p class="mb-3"><strong>Step 3:</strong> Select User Administration option from the dropbox menu</p>
+										<img src="assets/images/faqs/new_email_acc_3.jpg" class="mb-4">
+										<p class="mb-3"><strong>Step 4:</strong> Click on add button which is highlighted to create a new user</p>
+										<img src="assets/images/faqs/new_email_acc_4.jpg" class="mb-4">
+										<p class="mb-3"><strong>Step 5:</strong> After filling new user info click on save</p>
+										<img src="assets/images/faqs/new_email_acc_5.jpg" class="mb-4">
+										<p class="mb-3"><strong>Step 6:</strong> Your new user is now added successfully</p>
+										<img src="assets/images/faqs/new_email_acc_6.jpg">
+									</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -289,7 +365,31 @@
                                     </h5>
                                     </div>
                                     <div id="collapse4Three" class="collapse" aria-labelledby="heading4Three" data-parent="#accordion4Faq">
-                                    <div class="accordion-body">Find a Compromised Account</div>
+                                    <div class="accordion-body">
+										<p>When an account has been compromised, the spammer will try to send as much spam as possible though the server. This can cause a number of issues, including getting a domain or IP address blacklisted. Accounts can get compromised a number of ways, the most common of which is when the account is using a weak, insecure password.</p>
+										<p>There are a few ways administrators can become aware of when an account has been compromised, including by noticing the mail server spool filling up, causing both incoming and outgoing messages to be delayed. When this happens, administrators can review the Spool Dashboard or traffic reports in order to find the compromised domain and account being used to send the large amount of email.</p>
+										<p>Follow these steps to find the compromised account by reviewing the Spool Dashboard:</p>
+										<ol>
+											<li>Log into SmarterMail as an Administrator.</li>
+											<li>Within the <strong>Manage </strong>section, click on <strong>Spool</strong> in the navigation pane.</li>
+											<li>In the <strong>Overview tab</strong>, look at the <strong>Top Outbound Senders</strong> section to find any anomalies in outbound deliveries. If an account has been compromised, it will likely be the first in the list with the most deliveries. (The spool dashboard updates every 20 seconds for a real-time look at the spool.)</li>
+											<li>Determine whether the messages are valid emails or spam. This can be done in two ways. a.) Click on the Spool tab and use the search bar to find messages sent by the suspected user account. b.) Click on the <strong>Actions</strong> menu in the spool overview to <strong>Move Messages</strong> sent by the user (that are currently held in the spool) to their own folder on the server. Review the messages.</li>
+											<li>If the messages are found to be spam, use the <strong>Delete Messages </strong>action to delete the remaining messages in the spool sent by that user.</li>
+											<li>If the account is determined to be compromised, you can also temporarily disable the account, preventing future email from being sent out. Use the <strong>Disable User</strong> action to disable the user's account but still allow it to receive mail. Alternatively, you can navigate to the user's settings to change the User Status to 'Disable and don't allow mail'.</li>
+											<li>Look at the <strong>Top Outbound IP Addresses</strong> section to find any anomalies in outbound deliveries. Spammers may send messages through just one user account; however, they may authenticate using various IP addresses.</li>
+											<li>Repeat steps 5 and 6 to determine the legitimacy of the messages and take actions against them, if necessary.</li>
+											<li>If an IP Address is in violation, use the <strong>Blacklist IP</strong> action to add the IP address to the STMP Blocked list. (The IP will be blocked on SMTP only.)</li>
+										</ol>
+										<p>Follow these steps to find the compromised account by reviewing reports:</p>
+										<ol>
+											<li>Login to SmarterMail as an Administrator.</li>
+											<li>Click on the <strong>Reports icon.</strong></li>
+											<li>Select <strong>Message Traffic </strong>and change the mode from Trend to Domains<strong>.</strong></li>
+											<li>This report will list all domains on the server and display the number of incoming and outgoing messages for each. The domain with the compromised account will generally be the one with the most outgoing messages.</li>
+											<li>Clicking on the domain will display the Message Traffic report for users on that domain. From here, make sure the report Mode is set to Users (not Trend), and you can narrow down the one (or more) users sending the largest amount of email.</li>
+										</ol>
+										<p>The next steps are generally up to the administrator. They can either Manage the domain and change the user's password, disable the user or delete the account entirely to stop the spammer from relaying though the server.</p>
+									</div>
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +406,20 @@
                                     </div>
     
                                     <div id="collapse5One" class="collapse" aria-labelledby="heading5One" data-parent="#accordion5Faq">
-                                    <div class="accordion-body">How to access the Windows Server?</div>
+                                    <div class="accordion-body">
+										<div class="accordion-body">
+										<p class="mb-3"><strong>Step 1:</strong><br>Click the <strong>Start</strong> button on your local PC, At the foot of your start menu you will see a text box (this will be named Run or search depending upon the version of windows you are using). Enter <code>mstsc</code> into this text box and click [ENTER] on your keyboard.</p>
+										<img src="assets/images/faqs/remote_desktop_1.png" class="mb-4">
+										<p class="mb-3"><strong>Step 2:</strong><br>The Remote Desktop Connection wizard window will open. If you would like to share resources with the remote computer, expand the Options section.</p>
+										<img src="assets/images/faqs/remote_desktop_2.png" class="mb-4">
+										<p class="mb-3"><strong>Step 3:</strong><br>Click on the Local Resources tab. In the Local devices and resources section click <strong>More</strong>.</p>
+										<img src="assets/images/faqs/remote_desktop_3.png" class="mb-4">
+										<p class="mb-3"><strong>Step 4:</strong><br>A list of your drives will appear. Select any drives that you would like to access while connected to your remote server and click <strong>OK</strong>.</p>
+										<img src="assets/images/faqs/remote_desktop_4.png" class="mb-4">
+										<p class="mb-3"><strong>Step 5:</strong><br>Select the General tab and enter the IP address of your server in the Computer text box.</p>
+										<img src="assets/images/faqs/remote_desktop_5.png">
+									</div>
+									</div>
                                     </div>
                                 </div>
                             </div>
@@ -324,7 +437,21 @@
     
                                     <div id="collapse6One" class="collapse" aria-labelledby="heading6One" data-parent="#accordion6Faq">
                                     <div class="accordion-body">
-                                    <p>How to Mount an ISO on a Dedicated Servers using KVM</p>
+                                    	<p>In this article, we will show you how to mount an ISO file on your Indsoft dedicated server using the dedicated server KVM.</p>
+										<p><strong>1. Connect to the KVM</strong></p>
+										<p class="mb-3"><strong>2. Click the “Virtual Media” menu.</strong></p>
+										<img src="assets/images/faqs/mount_iso_1.png" class="mb-4">
+										<p class="mb-3"><strong>3. Click the “Virtual Storage” button found in the drop-down menu.</strong></p>
+										<img src="assets/images/faqs/mount_iso_2.png" class="mb-4">
+										<p class="mb-3"><strong>4. Select “ISO File” from the “Logical Drive Type” menu.</strong></p>
+										<img src="assets/images/faqs/mount_iso_3.png" class="mb-4">
+										<p class="mb-3"><strong>5. Click the “Open Image” button and locate the ISO file you wish to use.</strong></p>
+										<img src="assets/images/faqs/mount_iso_4.png" class="mb-4">
+										<p class="mb-3"><strong>6. Click the “Plug in” button.</strong></p>
+										<img src="assets/images/faqs/mount_iso_5.png" class="mb-4">
+										<p class="mb-3"><strong>7. Click the “OK” button.</strong></p>
+										<img src="assets/images/faqs/mount_iso_6.png" class="mb-4">
+										<p>That’s it! You have mounted your ISO file. You should be able to access the “drive” as you would if it was plugged in directly to the server.</p>
                                     </div>
                                     </div>
                                 </div>
@@ -336,7 +463,54 @@
                                     </div>
                                     <div id="collapse6Two" class="collapse" aria-labelledby="heading6Two" data-parent="#accordion6Faq">
                                     <div class="accordion-body">
-                                    <p>How to Protect Your Server from a DDoS Attack</p>
+										<p>In an ever changing digital landscape, personal and business owners of all sizes that are hosting data online must remain vigilant. There are a variety of ways in which a Hybrid or Dedicated Server may be taken offline. One of the most prevalent ways to bring a business offline is through the use of a DDoS attack. </p>
+										<p>In 2017, a <a href="https://www.theverge.com/2017/8/18/16170536/mirai-ddos-playstation-network-dyn-internet-angry-gamers">DDoS attack</a> aimed at PlayStation servers brought down several major services, blocking user access to Netflix, Amazon, and others throughout the northeastern parts of the US.</p>
+										<p>But what is a DDoS attack and how can server administrators and businesses prevent DDoS attacks from crippling their business? In this article, we&#39;ll provide you all the resources you need to understand what DDoS attacks are, how they can impact your business, and how to setup DDoS protection today.</p>
+										<h5 class="mt-4">What Is a DDoS Attack?</h5>
+										<p>Before we can understand how to prevent a DDoS attack, we must first understand what it is. DDoS stands for Distributed Denial of Service and it is a coordinated attack against one server or network in which dozens, hundreds, or even thousands of devices send fake traffic to one server in an attempt to bring the server or network offline. How this is actually accomplished varies depending on the DDoS attack type, which we will explore below.</p>
+										<p>What a DDoS attack means for genuine website visitors is that when they attempt to navigate a website, the server will be so congested with traffic that they will typically see a server error page and will be unable to browse the site. This could mean that visitors are unable to purchase your products or services or manage their accounts, which can be very costly for businesses.</p>
+										<p>DDoS attacks range in severity and length. They can be as little as a few gigabytes per second and up to several hundred gigabytes. The larger the DDoS attack, the more difficult it can be to stop it.</p>
+										<h5 class="mt-4">Why Do DDoS Attacks Exist?</h5>
+										<p>The vast majority of DDoS attacks are a targeted action against an organization. Hackers will reach out to an organization and demand a ransom payment to be paid (typically via bitcoin) or else the group will begin a DDoS attack against the company. This is often a bluff, but at times these groups will begin the attack as they claimed.</p>
+										<p>Businesses would be ill advised to pay any ransom to these groups as they are likely to keep coming back for more if they have a victim who is willing to comply. If you receive a notice like this, take the opportunity to deploy DDoS protection on your servers to prevent any downtime that may arise on unprotected servers.</p>
+										<h5 class="mt-4">What are the Impacts of a DDoS Attack?</h5>
+										<p>To understand how critical DDoS protection is to your business, think about the impact of your website going down for hours or even days. How would that affect your sales? How many prospective clients would you lose?</p>
+										<p>If a company generates, say, $5,000 in sales on an average day, one DDoS attack could cost the company over $15,000. That&#39;s a big hit for a small business. These attacks are also typically conducted during peak business hours, and attackers try to sustain the attacks as long as possible.</p>
+										<p>DDoS attacks also affect your brand&#39;s reputation. Users won&#39;t know you&#39;re the victim of an attack. All they know is that they visited your site but couldn&#39;t get through because your servers were down.</p>
+										<h5 class="mt-4">How Do DDoS Attacks Work?</h5>
+										<p>The methods utilized in performing a DDos attack vary based on the type of attack. Here are the most common methods used to attack a server:</p>
+										<h5 class="mt-4">SYN Flood</h5>
+										<p>The victim server receives spoofed SYN requests with fake IP addresses. This attack overwhelms system resources as the server tries to interpret the incoming packets which are coming in at a high rate.</p>
+										<h5 class="mt-4">SYN-ACK Flood</h5>
+										<p>The victim server receives spoofed SYN-ACK packets at a high packet rate, resulting in depleted system resources as the server tries to respond to these packets.</p>
+										<h5 class="mt-4">Fake Session</h5>
+										<p>This attack fakes a complete TCP communication and is designed to fool new defense tools that only monitor incoming traffic to the network.</p>
+										<p>DDoS attackers utilize one of a variety of attack types, or a combination, in an attempt to bring a server offline and bypass any DDoS protection that may be in place. That&#39;s why it&#39;s important to have a DDoS Protection plan which can guard against all attack types.</p>
+										<h5 class="mt-4">How to Protect Against DDoS Attacks</h5>
+										<p>As you can see, DDoS attacks are fairly common and have a significant impact on business. Luckily, there are a few ways to protect against DDoS attacks and stop a DDoS attack from ever occurring.</p>
+										<h5 class="mt-4">DDoS Protected Hosting</h5>
+										<p>The best way to stop a DDoS attack before it even begins is to equip every server in your fleet with DDoS protection. DDoS protected hosting utilizes a hardware device between your server and the internet and filters all traffic in order to prevent any type of DDoS attack from occurring.<p>
+										<p>DDoS Protection utilizes devices designed by RioRey, a leader in DDoS mitigation appliances. DDoS attacks are typically detected and mitigated within 0 to 90 seconds. This allows legitimate traffic to continue to reach the server, even when a DDoS attack is ongoing.</p>
+										<p>DDoS protected hosting is a small monthly fee in addition to the standard server rental and it ensures your server is protected from attack. This is more of a proactive approach rather than having to jump into defense mode after an attack has started.</p>
+										<p>Our enterprise-grade DDoS protection service protects against the most common DDoS attack types, including:</p>
+										<ul>
+											<li>UDP Flood</li>
+											<li>SYN Flood</li>
+											<li>SYN-ACK Flood</li>
+											<li>ICMP Flood</li>
+											<li>DNS Reflection Flood</li>
+											<li>Fake Sessions</li>
+											<li>Synonymous IP</li>
+											<li>Misused Application Attack</li>
+										</ul>
+										<p>If you&#39;re looking for the best way to prevent a DDoS attack, a dedicated DDoS protection device in place at all times is the most effective solution. Some businesses choose to implement hardware mitigation only once an attack has started, but the damage of the attack has often already occurred and it can be several hours before a hardware device can be in place.</p>
+										<h5 class="mt-4">Maintaining Server Security Best Practices</h5>
+										<p>Aside from investing in DDoS protected hosting, maintaining proper server security procedures is another way to limit the impacts of a DDoS attack. These include:</p>
+										<ul>
+											<li>Limiting access to internal systems from devices outside of the network</li>
+											<li>Keeping systems up to date</li>
+											<li>Maintaining proper password management strategies</li>
+										</ul>
                                     </div>
                                     </div>
                                 </div>
@@ -348,7 +522,88 @@
                                     </div>
                                     <div id="collapse6Three" class="collapse" aria-labelledby="heading6Three" data-parent="#accordion6Faq">
                                     <div class="accordion-body">
-                                    <p>Top 5 Ways to Secure Your Linux Server</p>
+                                    	<p>Every server on the internet is constantly vulnerable to intrusion by nefarious users. It’s important that server administrators take action as soon as they setup a server to protect their server.</p>
+										<p>In this tutorial, we will outline some common steps for securing a Linux server. Commands in this tutorial will be based on CentOS 7, but they can be applied to most Linux distributions</p>
+										<h5 class="mt-4">Update System Packages</h5>
+										<p>The best linux server security tip and key defense against attack is an up to date system that only contains packages actively being used by your applications.</p>
+										<p>If there is a service running that you don’t need, this leaves you unnecessarily vulnerable.</p>
+										<p>To update system packages and delete obsolete ones, run:</p>
+										<pre><code>yum update</code></pre>
+										<p>To upgrade to the next major version of a package, and delete obsolete packages run:</p>
+										<pre><code>yum upgrade</code>
+										<h5 class="mt-4">Configure Automatic Updates</h5>
+										<p>If you have a system which uses common applications that aren’t easily broken by routine system updates, you may wish to consider setting up automatic updates to improve linux server security. This is a useful server security tip for systems that you don’t regularly connect to.</p>
+										<p>To setup daily automatic updates, install yum-cron:</p>
+										<pre><code>yum -y install yum-cron</code>
+										<p>Configure the package according to your needs:</p>
+										<pre><code>vi /etc/yum/yum-cron.conf</code></pre>
+										<p>Start and enable the service on boot:</p>
+										<pre><code>systemctl start yum-cron systemctl enable yum-cron</code>
+										<p>This application will be added to your daily crontab to install updates automatically for you.</p>
+										<h5 class="mt-4">Maintain An Active Firewall</h5>
+										<p>Installing and maintaining a firewall is a great way to close up ports that don’t need to be open, further enhancing server security. We recommend iptables for this case.</p>
+										<p>To install iptables:</p>
+										<pre><code>yum install iptables-services</code></pre>
+										<p>Set iptables to run on startup:</p>
+										<pre><code>systemctl enable iptables</code>
+										<p>IPTables is now ready to be used For example, you can block an external IP with the following command:</p>
+										<pre><code>iptables -A INPUT -s 192.168.0.10 -j DROP</code></pre>
+										<p>To save rules permanently use the following command:</p>
+										<pre><code>service iptables save</code>
+										<h5 class="mt-4">Disable Root Login over SSH</h5>
+										<p>Disabling root login locks down a common source of brute-forcing. Attackers will now need to know a unique system user and password before gaining entry to your server.</p>
+										<p>To disable root login, follow these steps:</p>
+										<p>Add a user which will have SSH access and set the password:</p>
+										<pre><code>useradd billjohnson passwd billjohnson</code></pre>
+										<p>Add this user to have sudo access to run root commands:</p>
+										<pre><code>visudo</code></pre>
+										<p>Add the following line to this file and save it, replacing username with the user:</p>
+										<pre><code>username ALL=(ALL) ALL</code></pre>
+										<p>Open the following file in a text editor</p>
+										<pre><code>vi /etc/ssh/sshd_config</code></pre>
+										<p>Locate the following line:</p>
+										<pre><code>#PermitRootLogin yes</code></pre>
+										<p>Change it to the following:</p>
+										<pre><code>PermitRootLogin no</code></pre>
+										<p>Add the following line, then save and close the file:</p>
+										<pre><code>AllowUsers username</code></pre>
+										<p>Restart SSH:</p>
+										<pre><code>service sshd restart</code></pre>
+										<p>Root access is now disabled over SSH, providing additional server security from intrusion</p>
+										<h5 class="mt-4">Set Secure Password Policies</h5>
+										<p>Enforcing strict user password rules is a great way to ensure you are not vulnerable to system entry through the use of weak passwords.</p>
+										<p>Update the following file to set stricter password controls:</p>
+										<pre><code>vi /etc/security/pwquality.conf</code></pre>
+										<h5 class="mt-4">Conclusion</h5>
+										<p>There are hundreds of ways to secure a Linux server. We’ve outlined a few of the popular ones, but every application is specific. We provide complete server hardening and proactive monitoring to keep your server running at its best.</p>
+                                    </div>
+                                    </div>
+                                </div>
+								<div class="accordion-item">
+                                    <div class="accordion-header" id="heading6Four">
+                                    <h5 class="mb-0">
+                                        <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapse6Four" aria-expanded="false" aria-controls="collapse6Four">Top 5 Ways to Secure Your Windows Server</button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapse6Four" class="collapse" aria-labelledby="heading6Four" data-parent="#accordion6Faq">
+                                    <div class="accordion-body">
+                                    	<p>Every server connected to the public internet is vulnerable to intrusion. It’s important to implement basic security procedures when you first setup a Windows Server to ensure it is secure from attack.</p>
+										<p>This article will outline some key ways to secure your Windows Server.</p>
+										<h5 class="mt-4">Download All Available Updates</h5>
+										<p>Most servers are installed with an image of Windows Server that may not have all of the latest security and performance updates installed As soon as you receive the credentials for your Windows Server, make sure to login and install all available updates.</p>
+										<h5 class="mt-4">Set Firewall Rules</h5>
+										<p>Locking down open ports is an easy way to prevent unauthorized access to a server. Consider removing as many firewall rules as possible which will close all of the ports you are not using for your applications.</p>
+										<p>You’ll want to ensure that common ports like 3389 for remote desktop access and port 80 for web traffic are open as needed so that your applications can continue to run as expected.</p>
+										<h5 class="mt-4">Set Strong Password Policies</h5>
+										<p>If many users are connecting to your Windows Server, especially novice users, consider enforcing a strong password policy. We recommend having a minimum password length and complexity as well as a password expiration policy.</p>
+										<p>You will also want to only provide users with the admin access level required for their access to the server. Having multiple people with admin privileges who don’t need it is a recipe for disaster.</p>
+										<p>The most common form of server intrusion is through weak passwords, so it’s important that every user has a strong password set with the correct user privileges.</p>
+										<h5 class="mt-4">Disable File Sharing</h5>
+										<p>Windows Server file sharing has historically been a point of compromise for many servers due to the ports that must remain open for this purpose. Unless absolutely required, we recommend disabling file sharing.</p>
+										<h5 class="mt-4">Backup Your Server</h5>
+										<p>The best way to truly secure a server is understanding that no technology is perfect, and even with the best implemented security policies, things happen. Maintaining routine full server backups gives you the peace of mind knowing that you can easily restore the data when you need it. Equally as important to performing backups is testing to ensure the restoration of backups works perfectly and is a known process. There is nothing worse than realizing the only backup of a server has been corrupt all along.</p>
+										<h5 class="mt-4">Conclusion</h5>
+										<p>There are many ways to secure a Windows Server. We’ve outlined some of the most important aspects, but there are so many other things you should consider.</p>
                                     </div>
                                     </div>
                                 </div>
@@ -366,7 +621,18 @@
                                     </div>
     
                                     <div id="collapse7One" class="collapse" aria-labelledby="heading7One" data-parent="#accordion7Faq">
-                                    <div class="accordion-body">cPanel: How to Login</div>
+                                    <div class="accordion-body">
+										<p>In this article, we will show you how to login to cPanel.</p>
+										<p class="mb-3"><strong>1. Login to cPanel by visiting the url: https://cp.space2let.com:2083 for clients and https://cp.space2let.com:2087 for admin.</strong></p>
+										<p class="mb-3"><strong>2. Enter your cPanel Username.</strong></p>
+										<img src="assets/images/faqs/whm_cp_1.png" class="mb-4">
+										<p class="mb-3"><strong>3. Enter your cPanel Password.</strong></p>
+										<img src="assets/images/faqs/whm_cp_2.png" class="mb-4">
+										<p class="mb-3"><strong>4. Click the Log in button.</strong></p>
+										<img src="assets/images/faqs/whm_cp_3.png" class="mb-4">
+										<p class="mb-3"><strong>That’s it! You now know how to login to cPanel.</strong></p>
+										<img src="assets/images/faqs/whm_cp_4.png" class="mb-4">
+									</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -376,7 +642,18 @@
                                     </h5>
                                     </div>
                                     <div id="collapse7Two" class="collapse" aria-labelledby="heading7Two" data-parent="#accordion7Faq">
-                                    <div class="accordion-body">cPanel: How to Remove a FTP Account</div>
+                                    <div class="accordion-body">
+										<p>In this article, we will show you how to login to cPanel.</p>
+										<p class="mb-3"><strong>1. Login to cPanel by visiting the url: <a href="https://cp.space2let.com:2087." target="_blank">https://cp.space2let.com:2087.</a></strong></p>
+										<p class="mb-3"><strong>2. Click the FTP Accounts link in the FIles section of cPanel.</strong></p>
+										<img src="assets/images/faqs/remote_ftp_1.png" class="mb-4">
+										<p class="mb-3"><strong>3. Click the Delete button for the account you wish to delete.</strong></p>
+										<img src="assets/images/faqs/remote_ftp_2.png" class="mb-4">
+										<p class="mb-3"><strong>4. If you wish to delete the user’s home directory, you can do so by selecting the option. Please be aware that this will DELETE everything found in the users home directory. Please use with caution.</strong></p>
+										<img src="assets/images/faqs/remote_ftp_3.png" class="mb-4">
+										<p class="mb-3"><strong>5. Click the Delete button.</strong></p>
+										<img src="assets/images/faqs/remote_ftp_4.png">
+									</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -386,7 +663,18 @@
                                     </h5>
                                     </div>
                                     <div id="collapse7Three" class="collapse" aria-labelledby="heading7Three" data-parent="#accordion7Faq">
-                                    <div class="accordion-body">How to Access the FTP Client Configuration Settings</div>
+                                    <div class="accordion-body">
+										<p>In this article, we will show you how to access the FTP client configuration information. This information will help you connect to FTP using your FTP client.</p>
+										<p class="mb-3"><strong>1. Login to cPanel by visiting the url: https://cp.space2let.com:2087 for clients and https://cp.space2let.com:2087 for admin.</strong></p>
+										<p class="mb-3"><strong>2. Click the FTP Accounts link in the Files section of cPanel</strong></p>
+										<img src="assets/images/faqs/ftp_client_1.png" class="mb-4">
+										<p class="mb-3"><strong>3. Click the Configure FTP Client button.</strong></p>
+										<img src="assets/images/faqs/ftp_client_2.png" class="mb-4">
+										<p class="mb-3"><strong>Here you can see the settings for manually configuring your client.</strong></p>
+										<img src="assets/images/faqs/ftp_client_3.png" class="mb-4">
+										<p class="mb-3"><strong>In addition, if you use FileZilla, CoreFTP or Cyberduck, you can download the configuration file here.</strong></p>
+										<img src="assets/images/faqs/ftp_client_4.png" class="mb-4">
+									</div>
                                     </div>
                                 </div>
                             </div>
@@ -403,7 +691,14 @@
                                     </div>
     
                                     <div id="collapse8One" class="collapse" aria-labelledby="heading8One" data-parent="#accordion8Faq">
-                                    <div class="accordion-body">How To Create An Additional FTP User In Control Panel</div>
+                                    <div class="accordion-body">
+										<p>Log in to "<strong>Control Panel</strong>" and go to the FTP Users section</p>
+										<p>Click "<strong>Add</strong>"<p>
+										<p>Create a new user by entering the required information in the blank fields<p>
+										<p>Use the "<strong>Directory Path field to restrict a FTP</strong>" user to one specific sub directory</p>
+										<p>Click the "<strong>Permissions</strong>" box to determine what kind of file permissions this FTP user will have</p>
+										<p>Click Create to "<strong>Finish</strong></p>
+									</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -413,17 +708,226 @@
                                     </h5>
                                     </div>
                                     <div id="collapse8Two" class="collapse" aria-labelledby="heading8Two" data-parent="#accordion8Faq">
-                                    <div class="accordion-body">Set up SmarterStats as an IIS Site (IIS 7.0/7.5)</div>
+                                    <div class="accordion-body">
+										<p>By default, SmarterStats installs a basic Web server that allows administrators to start using the application immediately after installation. However, SmarterTools recommends moving to a more robust and secure Web server, such as Microsoft IIS.</p>
+										<p>The instructions for setting up SmarterStats as an IIS site differ slightly depending on what version of IIS you're on. Only the instructions for IIS 7.0 are described below.</p>
+										<p>NOTE: This topic assumes that you are familiar with IIS and how it works. SmarterTools recommends that you use the Web server included with SmarterStats if you are unfamiliar with or uncomfortable using Microsoft IIS.</p>
+										<h5 class="mt-4">Applies to SmarterStats 6.x-11.x</h5>
+										<p>This article covers the following:</p>
+										<ul>
+											<li>Disabling the SmarterStats Web server</li>
+											<li>Adding a new application pool for SmarterStats</li>
+											<li>Adding SmarterStats to IIS</li>
+											<li>Verifying IIS Settings</li>
+											<li>Updating DNS</li>
+											<li>Testing the site</li>
+										</ul>
+										<p><strong>Disabling the SmarterStats Web Server</strong></p>
+										<p>These steps will stop and disable the default web server that is included with SmarterStats. This will also have the side-effect of disabling any shortcut for SmarterStats that may be placed on your desktop until you update it with the new URL for the SmarterStats site created in IIS.</p>
+										<ol>
+											<li>Click on <strong>Start</strong> -&gt;<strong>Programs</strong> -&gt; <strong>SmarterTools</strong> -&gt; <strong>SmarterStats</strong> -&gt; <strong>Configure SmarterStats Web Server</strong></li>
+											<li>Click on the <strong>Stop</strong> button</li>
+											<li>Change the Startup Mode to <strong>Disabled</strong></li>
+											<li>Click on the <strong>Apply</strong> button</li>
+											<li>Click the <strong>Close</strong> button</li>
+										</ol>
+										<p>NOTE: You can also stop and disable the SmarterStats Web server from within the Services administrative tool if you are more comfortable using the Windows Server admin tool set.</p>
+										<p><strong>Add an Application Pool</strong></p>
+										<p>Follow these steps to add an application pool specifically for SmarterStats:</p>
+										<ol>
+											<li>Open <strong>Internet Information Services (IIS) Manager</strong></li>
+											<li>Right click on <strong>Application Pools</strong> from the tree view and choose <strong>Add Application Pool</strong></li>
+											<li>Name the new application pool <em>SmarterStats</em>, or something similarly easy to identify</li>
+											<li>Set the .Net Framework to .NET 4.5 (Versions 10.x and earlier support .NET 4.0)</li>
+											<li>Set the <strong>Application Pools Managed Pipeline</strong> to 'Integrated'</li>
+											<li>Make sure "Start application pool immediately" is checked</li>
+											<li>Click <strong>OK</strong></li>
+										</ol>
+										<p><strong>Add SmarterStats to IIS</strong></p>
+										<p>Follow these steps to add SmarterStats to IIS:</p>
+										<ol>
+											<li>Open <strong>Internet Information Services</strong> (IIS) <strong>Manager</strong></li>
+											<li>Click on your <strong>ServerName</strong>, and on the right side, under IIS, double-click <strong>ISAPI and CGI Restrictions</strong></li><li>Verify that ASP.NET v4.5 is allowed. If not, right click on ASP.NET v4.5.x and select <strong>Allowed. </strong>(Versions 10.x and earlier support .NET 4.0)</li>
+											<li>On the left side of the page, right click on <strong>Sites</strong> in the tree view and choose <strong>Add Website</strong></li>
+											<li>Name the site <strong>SmarterStats</strong></li>
+											<li>If you created an Application Pool name other than <strong>SmarterStats</strong>, click <strong>Select</strong> and choose the correct Application Pool</li>
+											<li>For the physical path, browse to the SmarterStats -&gt; MRS folder. The default location is C:\Program Files (x86)\SmarterTools\SmarterStats\MRS</li><li>For Binding, choose an IP address to use for Webmail. If this IP address is shared with another Web site, you will need to use a different port or Host Headers. For more information about using Host headers, refer to the IIS documentation</li><li>Make sure "Start Web site immediately" is checked</li>
+											<li>Click <strong>OK</strong></li>
+										</ol>
+										<p><strong>Verify IIS Settings</strong></p>
+										<p>Follow these steps to verify the IIS settings. Please read each item carefully.</p>
+										<ol>
+											<li>In IIS Manager, click on your <strong>ServerName</strong></li>
+											<li>Under IIS, double click <strong>ISAPI and CGI Restrictions</strong></li>
+											<li>Verify that ASP .NET v4.5 is allowed. If it is not, right-click on ASP .NET v4.5 and select <strong>Allowed. </strong>(Versions 10.x and earlier support .NET 4.0)</li>
+											<li>In the tree view, click <strong>Sites</strong></li>
+											<li>Expand (or double click) the SmarterStats site</li>
+											<li>Click on the <strong>App_Themes</strong> folder</li>
+											<li>Under IIS, double click <strong>HTTP Response Headers</strong></li>
+											<li>Under the Action menus, click <strong>Set Common Headers</strong></li>
+											<li>Enable the <strong>Expire Web content </strong>setting
+												<ul>
+													<li>Click <strong>After</strong></li>
+													<li><strong>Add 7</strong> for the number of days</li>
+												</ul>
+											</li>
+											<li>Click <strong>OK</strong></li>
+											<li>Click on <strong>Application Pools</strong> in the tree view</li>
+											<li>Right click on the SmarterStats application pool and select <strong>Advanced Settings</strong></li>
+											<li>Under the Process Model heading, ensure the the <strong>Identity</strong> is set to the <strong>NetworkService</strong> account</li>
+											<li>From the <strong>Start</strong> menu, open <strong>Administrative Tools</strong> and select <strong>Services</strong>, then verify that the World Wide Publishing Service is running</li>
+										</ol>
+										<p><strong>Update DNS</strong></p>
+										<p>If any sites are already set up with SmarterStats, make sure to update their DNS records to point to the new IP address.</p>
+										<p><strong>Test the site</strong></p>
+										<p>Open up your browser and type the IP address of the site you just added.</p>
+									</div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
+								<div class="accordion-item">
                                     <div class="accordion-header" id="heading8Three">
                                     <h5 class="mb-0">
                                         <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapse8Three" aria-expanded="false" aria-controls="collapse8Three">Set up SmarterStats as an IIS Site in IIS 8</button>
                                     </h5>
                                     </div>
                                     <div id="collapse8Three" class="collapse" aria-labelledby="heading8Three" data-parent="#accordion8Faq">
-                                    <div class="accordion-body">Set up SmarterStats as an IIS Site in IIS 8</div>
+                                    <div class="accordion-body">
+										<p>By default, SmarterStats installs a basic Web server that allows administrators to start using the application immediately after installation. However, SmarterStats recommends moving to a more robust and secure Web server, such as Microsoft IIS. Setting up SmarterStats as an IIS site is a multistep process and differs slightly depending on what version of IIS you're on. Only the instructions for IIS 8.0 are described below.</p>
+										<p>NOTE: This topic assumes that you have IIS installed and are familiar with how it works. It is also recommended to be up to date with all software patches. If you are unfamiliar with or uncomfortable using Microsoft IIS you can use the Web server included with SmarterStats; however, the default Web server is not meant for production environments.</p>
+										<h5 class="mt-4">Applies to SmarterStats 10.x - 11.x</h5>
+										<p><strong>Disable the SmarterStats Web Server</strong></p>
+										<p>Follow these steps to stop and disable the default Web server that is included with SmarterStats. This will also have the side-effect of disabling any shortcut for SmarterStats that may be placed on your desktop until you update it with the new URL for the SmarterStats site created in IIS.</p>
+										<ol>
+											<li>Click on <strong>Start</strong> &gt; Programs &gt; SmarterStats &gt; SmarterStats &gt; Configure SmarterStats Web Server</li>
+											<li>Click on the <strong>Stop</strong> button</li>
+											<li>Change the Startup Mode to <strong>Disabled</strong></li>
+											<li>Click on the <strong>Apply</strong> button</li>
+											<li>Click the <strong>Close</strong> button</li>
+										</ol>
+										<p>NOTE: You can also stop and disable the SmarterStats Web server from within the Services administrative tool if you are more comfortable using the Windows Server admin tool set.</p>
+										<p><strong>Add IIS ISAPI Components</strong></p>
+										<p>Follow these steps to add the necessary IIS components: </p>
+										<ol>
+											<li>Open up IIS</li>
+											<li>When prompted Launch Internet Information Services (IIS) Manager</li>
+											<li>Click on <strong>Products</strong> tab</li>
+											<li>Click on <strong>Servers</strong></li>
+											<li>Install required components of: IIS: ASP.NET, .NET Extensibility, ASP, CGI, ISAPI Extensions, ISAPI Filters</li><li>Install any other options components</li>
+											<li>Click <strong>Install</strong></li>
+										</ol>
+										<p><strong>Add an Application Pool</strong></p>
+										<p>Follow these steps to add an application pool specifically for SmarterStats: </p>
+										<ol>
+											<li>Open <strong>Internet Information Services (IIS) Manager</strong></li>
+											<li>Right click on <strong>Application Pools</strong> from the tree view and choose <strong>Add Application Pool</strong></li>
+											<li>Name the new application pool <em>SmarterStats</em>, or something similarly easy to identify</li>
+											<li>Set the .Net Framework Version to v4.5.x (Versions 10.x and earlier support .NET 4.0)</li>
+											<li>Set the <strong>Application Pools Managed Pipeline</strong> to 'Integrated'</li>
+											<li>Make sure "Start application pool immediately" is checked</li>
+											<li>Click <strong>OK</strong></li>
+										</ol>
+										<p><strong>Add SmarterStats to IIS</strong></p>
+										<p>Follow these steps to add SmarterStats to IIS: </p>
+										<ol>
+											<li>Open <strong>Internet Information Services (IIS) Manager</strong></li>
+											<li>Click on your <strong>ServerName</strong>, and on the right side, under IIS, double-click <strong>ISAPI and CGI Restrictions</strong></li>
+											<li>Verify that ASP.NET v4.5 is allowed (If not, right click on ASP.NET v4.5.x and select <strong>Allowed</strong>) (Versions 10.x and earlier support .NET 4.0)</li>
+											<li>On the left side of the page, right click on <strong>Sites</strong> in the tree view and choose <strong>Add Website</strong></li>
+											<li>Name the site <strong>SmarterStats</strong></li><li>If you created an Application Pool name other than <strong>SmarterStats</strong>, click <strong>Select</strong> and choose the correct Application Pool</li>
+											<li>For the physical path, browse to the SmarterStats -&gt; MRS folder. The default location is C:\Program Files (x86)\ SmarterTools\ SmarterStats\MRS</li><li>For Binding, choose an IP address to use for Webmail. If this IP address is shared with another Web site, you will need to use a different port or Host Headers. For more information about using Host headers, refer to the IIS documentation</li>
+											<li>Make sure "Start Web site immediately" is checked</li>
+											<li>Click <strong>OK</strong></li>
+										</ol>
+										<p><strong>Verify IIS Settings</strong><br>Follow these steps to verify the IIS settings. Please read each item carefully. </p>
+										<ol>
+											<li>In IIS Manager, click on your <strong>ServerName</strong></li>
+											<li>Under IIS, double click <strong>ISAPI and CGI Restrictions</strong></li>
+											<li>Verify that ASP .NET v4.5 is allowed. If it is not, right-click on ASP .NET v4.5 and select <strong>Allowed. </strong>(Versions 10.x and earlier support .NET 4.0)</li>
+											<li>In the tree view, click <strong>Sites</strong></li>
+											<li>Expand (or double click) the SmarterStats site</li>
+											<li>Click on the <strong>App_Themes</strong> folder</li><li>Under IIS, double click <strong>HTTP Response Headers</strong></li><li>Under the Action menus, click <strong>Set Common Headers</strong></li>
+											<li>Enable the <strong>Expire Web content </strong>setting
+												<ul>
+													<li>Click <strong>After</strong></li>
+													<li><strong>Add 7</strong> for the number of days</li>
+												</ul>
+											</li>
+											<li>Click <strong>OK</strong></li>
+											<li>Click on <strong>Application Pools</strong> in the tree view</li>
+											<li>Right click on the SmarterStats application pool and select <strong>Advanced Settings</strong></li>
+											<li>Under the Process Model heading, ensure the the <strong>Identity</strong> is set to the <strong>NetworkService</strong> account</li>
+											<li>From the <strong>Start</strong> menu, open <strong>Administrative Tools</strong> and select <strong>Services</strong>, then verify that the World Wide Publishing Service is running</li>
+										</ol>
+										<h5 class="mt-4">Applies to SmarterStats 6.x-9.x</h5>
+										<p><strong>Disable the SmarterStats Web Server</strong> </p>
+										<p>Follow these steps to stop and disable the default Web server that is included with SmarterStats. This will also have the side-effect of disabling any shortcut for SmarterStats that may be placed on your desktop until you update it with the new URL for the SmarterStats site created in IIS.</p>
+										<ol>
+											<li>Click on <strong>Start</strong> -&gt; Programs -&gt; SmarterStats -&gt; SmarterStats -&gt; Configure SmarterStats Web Server</li>
+											<li>Click on the <strong>Stop</strong> button</li>
+											<li>Change the Startup Mode to <strong>Disabled</strong></li>
+											<li>Click on the <strong>Apply</strong> button</li>
+											<li>Click the <strong>Close</strong> button</li>
+										</ol>
+										<p>NOTE: You can also stop and disable the SmarterStats Web server from within the Services administrative tool if you are more comfortable using the Windows Server admin tool set. </p> <p><strong>Add IIS 6 Management Compatibility</strong></p>
+										<ol>
+											<li>Open ServerManager</li>
+											<li>Click on Dashboard</li>
+											<li>Click on Add Roles and Features</li>
+											<li>Click Next and then next again</li>
+											<li>Select server name and then next</li>
+											<li>Expand Web Server (IIS) then expand IIS 6 Management Compatibility</li>
+											<li>Enable IIS 6 Management Console</li>
+											<li>Click Next and Next again</li>
+											<li>Click Install</li>
+										</ol>
+										<p>NOTE: IIS 6 Management Compatibility needs to be installed for SmarterStats to import logs from the Import From IIS feature. </p>
+										<p><strong>Add IIS ISAPI Components</strong></p>
+										<p>Follow these sets to add the necessary IIS components.</p>
+										<ol>
+											<li>Open up IIS</li>
+											<li>When prompted Launch Internet Information Services (IIS) Manager</li>
+											<li>Click on <strong>Products</strong> tab</li>
+											<li>Click on <strong>Servers</strong></li>
+											<li>Install required components of: IIS: ASP.NET, .NET Extensibility, ASP, CGI, ISAPI Extensions, ISAPI Filters</li>
+											<li>Install any other options components</li>
+											<li>Click <strong>Install</strong></li>
+										</ol>
+										<p><strong>Add an Application Pool</strong></p>
+										<p>Follow these steps to add an application pool specifically for SmarterStats:</p>
+										<ol>
+											<li>Open <strong>Internet Information Services (IIS) Manager</strong></li>
+											<li>Right click on <strong>Application Pools</strong> from the tree view and choose <strong>Add Application Pool</strong></li>
+											<li>Name the new application pool <em>SmarterStats</em>, or something similarly easy to identify</li>
+											<li>Set the .Net Framework Version to v4.5.x (Versions 10.x and earlier support .NET 4.0)</li>
+											<li>Set the <strong>Application Pools Managed Pipeline</strong> to 'Integrated'</li>
+											<li>Make sure "Start application pool immediately" is checked</li>
+											<li>Click <strong>OK</strong></li>
+										</ol>
+										<p><strong>Add SmarterStats to IIS</strong></p>
+										<p>Follow these steps to add SmarterStats to IIS:</p>
+										<ol>
+											<li>Open <strong>Internet Information Services (IIS) Manager</strong></li>
+											<li>Click on your <strong>ServerName</strong>, and on the right side, under IIS, double-click <strong>ISAPI and CGI Restrictions</strong></li>
+											<li>Verify that ASP.NET v4.5 is allowed. If not, right click on ASP.NET v4.5.x and select <strong>Allowed. </strong>(Versions 10.x and earlier support .NET 4.0)</li>
+											<li>On the left side of the page, right click on <strong>Sites</strong> in the tree view and choose <strong>Add Website</strong></li>
+											<li>Name the site <strong>SmarterStats</strong></li>
+											<li>If you created an Application Pool name other than <strong>SmarterStats</strong>, click <strong>Select</strong> and choose the correct Application Pool</li>
+											<li>For the physical path, browse to the SmarterStats -&gt; MRS folder. The default location is C:\Program Files (x86)\ SmarterTools\ SmarterStats\MRS</li>
+											<li>For Binding, choose an IP address to use for Webmail. If this IP address is shared with another Web site, you will need to use a different port or Host Headers. For more information about using Host headers, refer to the IIS documentation</li>
+											<li>Make sure "Start Web site immediately" is checked</li>
+											<li>Click <strong>OK</strong></li>
+										</ol>
+										<p><strong>Verify IIS Settings</strong> </p>
+										<p>Follow these steps to verify the IIS settings. Please read each item carefully. </p>
+										<ol>
+											<li>In IIS Manager, click on your <strong>ServerName</strong></li>
+											<li>Under IIS, double click <strong>ISAPI and CGI Restrictions</strong></li>
+											<li>Verify that ASP .NET v4.5 is allowed. If it is not, right-click on ASP .NET v4.5 and select <strong>Allowed. </strong>(Versions 10.x and earlier support .NET 4.0)</li>
+											<li>Click on <strong>Application Pools</strong> in the tree view</li><li>Right click on the SmarterStats application pool and select <strong>Advanced Settings</strong></li>
+											<li>Under the Process Model heading, ensure the the <strong>Identity</strong> is set to the <strong>NetworkService</strong> account</li>
+											<li>From the <strong>Start</strong> menu, open <strong>Administrative Tools</strong> and select <strong>Services</strong>, then verify that the World Wide Publishing Service is running</li>
+										</ol>
+									</div>
                                     </div>
                                 </div>
                             </div>
@@ -440,7 +944,31 @@
                                     </div>
     
                                     <div id="collapse9One" class="collapse" aria-labelledby="heading9One" data-parent="#accordion9Faq">
-                                    <div class="accordion-body">Business Hours and Holidays</div>
+                                    <div class="accordion-body">
+										<h5 class="mt-0">Business Hours :</h5>
+										<p>Support operating hours are :</p>
+										<p><strong>Monday <span class="pl-4">7.00 AM TO 12.00 AM</span></strong></p>
+										<p><strong>Tuesday <span class="pl-4">7.00 AM TO 12.00 AM</span></strong></p>
+										<p><strong>Wednesday <span class="pl-4">7.00 AM TO 12.00 AM</span></strong></p>
+										<p><strong>Thursday <span class="pl-4">7.00 AM TO 12.00 AM</span></strong></p>
+										<p><strong>Friday <span class="pl-4">7.00 AM TO 12.00 AM</span></strong></p>
+										<p><strong>Saturday <span class="pl-4">7.00 AM TO 12.00 AM</span></strong></p>
+										<p><strong>Sunday <span class="pl-4">10.00 AM TO 7.00 PM</span></strong></p>
+										<h5 class="mt-4">Company Holidays</h5>
+										<p>The Indsoft offices will be closed on the following dates:</p>
+										<ul>
+											<li><strong>New Year's Day</strong> : &nbsp;Tuesday, January 1, 2019</li>
+											<li><strong>Republic Day&nbsp;</strong><strong>:</strong> Saturday, Jan 26, 2019</li>
+											<li><strong>Ugadi / Gudi Padwa&nbsp;</strong><strong>:&nbsp;</strong>Saturday , Apr 06, 2019&nbsp;</li>
+											<li><strong>Labor Day :</strong> Monday, September 2, 2019</li>
+											<li><strong>Independence Day</strong> <strong>:</strong> Thursday &nbsp; &nbsp;Aug 15, 2019</li>
+											<li><strong>Vinayaka Chaturthi</strong> <strong>:</strong> Monday &nbsp; &nbsp;Sep 02, 2019</li>
+											<li><strong>Diwali / Deepavali</strong> <strong>:</strong> Sunday &nbsp;Oct 27, 2019</li>
+											<li><strong>Christmas</strong> : Wednesday &nbsp;Dec 25, 2019</li>
+										</ul>
+										<p>All support tickets submitted on these dates will be responded to the next business day. Emergency Support is available 24/7/365 and will receive an initial response within one hour.</p>
+										<p>The dates listed above are subject to change without notice. Indsoft recommends checking this page for updates prior to submitting a support ticket.</p>
+									</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -450,7 +978,13 @@
                                     </h5>
                                     </div>
                                     <div id="collapse9Two" class="collapse" aria-labelledby="heading9Two" data-parent="#accordion9Faq">
-                                    <div class="accordion-body">Emergency 24x7 Support</div>
+                                    <div class="accordion-body">
+										<p>Indsoft System offers a variety of support tickets that customers can utilize for technical assistance. For more information on the support ticket options are available.</p>
+										<h5 class="mt-4">Emergency 24x7 Support</h5>
+										<p><strong>$149 per ticket</strong></p>
+										<p>An Emergency 24x7 Ticket can be used to resolve a critical technical issue where a business is experiencing a complete outage or critical failure of Indsoft software that is negatively affecting a large number of end users.</p>
+										<p>Emergency Support tickets are submitted as part of the purchase process, right from the Indsoft website and will receive a one-hour response time, 24/7/365, regardless of when the ticket was submitted. Indsoft standard business hours, holidays, etc. NOTE: Emergency 24x7 Tickets receive a one-hour initial response time; however, some issues do take longer to resolve. This ticket guarantees a response within one-hour, while the resolution may take longer. After the initial response, emergency tickets are handled during business hours.</p>
+									</div>
                                     </div>
                                 </div>                                
                             </div>
@@ -461,85 +995,6 @@
         </div>
     </section>
     <!-- /Contact Us End -->
-
-    <!-- Start Partners -->
-    <section class="section gray-bg">
-        <div class="container">
-            <div class="row">
-                <!-- start partner logo item -->
-                <div class="offset-lg-1 col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/ssae.png" alt="">
-                    </div>
-                </div>
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/microsoft.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-cente wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/pci.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/hippa.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/windows.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="offset-lg-1 col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1.2s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/intel.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1.4s">
-
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/dell.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1.6s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/cpanel.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1.8s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/centos.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-                <!-- start partner logo item -->
-                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="2s">
-                    <div class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
-                        <img src="assets/images/partners/cisco.png" alt="">
-                    </div>
-                </div>
-                <!-- end partner logo item -->
-            </div>
-        </div>
-    </section>
-    <!-- /Partners End -->
 
     <!-- Footer Start -->
     <footer class="footer">

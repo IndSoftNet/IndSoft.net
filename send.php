@@ -17,7 +17,7 @@ include('pear.php');
 
  $to = 'support@indsoft.net'; 
  $from = $email;
- $subject = "Contact form filled on events.tradefinex.org";
+ $subject = "Contact form filled on Cloud.IndSoft.net";
  $body = "Hello $name,<br>
   We received an email request!
   <br><br><br><br>
@@ -54,7 +54,7 @@ include('pear.php');
 
   $mail->AddAddress($to, $to);
   
-  $mail-> AddBCC ("raj@xinfin.org");
+  $mail-> AddBCC ("anil@indsoft.net");
 
 	//$mail->Send();
 
@@ -66,4 +66,8 @@ include('pear.php');
   if (pear::isError($mail))
    {echo("<p>" . $mail->getMessage() . "</p>");}
   else
-   {echo("<p>Message successfully sent!</p>");}
+   {
+    echo("<p>Message successfully sent!</p>");
+    header("Location:https://Cloud.IndSoft.net/");
+
+  }

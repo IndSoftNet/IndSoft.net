@@ -15,32 +15,25 @@ include('pear.php');
   $country = $_POST['country'];
   $message = $_POST['your-message'];
 
- $contacts = array(
- "$email",
- //"dattatrayh@gmail.com"
- );
-
- foreach($contacts as $contact) {
- $to = $contact; 
- 
- 
- $from = "webmaster@events.tradefinex.org";
- //$to = "dattatrayh@gmail.com";
+ $to = 'support@indsoft.net'; 
+ $from = $email;
  $subject = "Contact form filled on events.tradefinex.org";
  $body = "Hello $name,<br>
-  We received your email request!
-  <br>Our team member will get back to you as soon as possible.<br>
-  Thank you!<br><br><br>
+  We received an email request!
+  <br><br><br><br>
   Name :- $name<br><br>
   E-mail :- $email<br><br>
-  I'm interested in :- $company_name<br><br>
+  Mobile Number :- $telephone<br><br>
+  Company :- $company_name<br><br>
+  Website :- $website<br><br>
+  Pageviews :- $pageviews<br><br>
+  Country :- $country<br><br>
   Message :- $message<br>";
-}
 
- $host = "207.182.142.230";
+ $host = "mail-b01.cloudmailbox.in";
  $smtpinfo["auth"] = true;
- $smtpinfo["username"] = "krama@mail01-b.internetempower.com";
- $smtpinfo["password"] = "krama852";
+ $smtpinfo["username"] = "indsoft@mail-b01.cloudmailbox.in";
+ $smtpinfo["password"] = "Ind@mb01#$039";
 
  $headers = array ('From' => $from,'To' => $to,'Subject' => $subject);
  //$smtp = mail::factory('smtp',array ('host' => $host,'auth' => true,'username' => $username,'password' => $password));
@@ -49,19 +42,19 @@ include('pear.php');
 
 	$mail->IsSMTP(); // telling the class to use SMTP
 	$mail->IsHTML(true);
-	$mail->Host       = "207.182.142.230"; // SMTP server
+	$mail->Host       = "mail-b01.cloudmailbox.in"; // SMTP server
   	
 	$mail->From       = $from;
-	$mail->FromName   = "webmaster@events.tradefinex.org";
+	$mail->FromName   = $from;
 	$mail->Subject    = $subject;
 
 	$mail->MsgHTML($body);
 	
-	$mail-> AddBCC ("info@xinfin.org", "events@tradefinex.org");
-	
 	$mail->AddReplyTo ($email);
 
-	$mail->AddAddress($to, $to);
+  $mail->AddAddress($to, $to);
+  
+  $mail-> AddBCC ("raj@xinfin.org");
 
 	//$mail->Send();
 
@@ -70,10 +63,7 @@ include('pear.php');
  //$mail->send($to, $headers, $body);
  // $mail = $smtp->send($to, $headers, $body);
 
-
   if (pear::isError($mail))
    {echo("<p>" . $mail->getMessage() . "</p>");}
   else
    {echo("<p>Message successfully sent!</p>");}
-
-?>

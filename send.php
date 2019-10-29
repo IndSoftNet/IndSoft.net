@@ -15,7 +15,7 @@ include('pear.php');
   $country = $_POST['country'];
   $message = $_POST['your-message'];
 
- $to = 'support@indsoft.net'; 
+ $to = 'support@indsoft.net,mktg@indsoft.net'; 
  $from = $email;
  $subject = "Contact form filled on Cloud.IndSoft.net";
  $body = "Hello $name,<br>

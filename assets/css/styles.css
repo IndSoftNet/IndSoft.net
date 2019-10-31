@@ -933,19 +933,19 @@ img {
 -----------------------------------*/
 .parallax {
     background-attachment: fixed;
-    background-image: url(../images/success-stories.jpg);
-    background-repeat: no-repeat;
+    /*background-image: url(../images/success-stories.jpg);
+    background-repeat: no-repeat;*/
     background-position: 50% top;
     background-size: cover;
 }
 .parallax-content-01 {
     padding-top: 60px;
     padding-bottom: 200px;
-    color: #fff;
+    /*color: #fff;*/
 	text-align: center;
 }
 .parallax-content-01 .heading-1 {
-    font-size: 45px;
+    font-size: 44px;
     font-weight: 400;
     padding-bottom: 0px;
     line-height: 50px;

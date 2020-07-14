@@ -44,7 +44,7 @@ require 'vendor/autoload.php';
  $mail->Username = 'indsoft@mail-b01.cloudmailbox.in';
  $mail->Password = 'Ind@mb01#$039';
  $mail->setFrom($email, $name);
- $mail->addAddress(' support@indsoft.net','mktg@indsoft.net','ssarveshchauhan@gmail.com');
+ $mail->addAddress(' support@indsoft.net','mktg@indsoft.net','anil@xinfin.org');
  $mail->Subject = $subject;
  $mail->isHTML(false);
  $mail->Body = $body;

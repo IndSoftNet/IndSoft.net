@@ -49,8 +49,7 @@ require 'vendor/autoload.php';
  $mail->isHTML(false);
  $mail->Body = $body;
 
- echo  $Host;
-
+ 
 //  $host = "mail-b01.cloudmailbox.in";
 //  $smtpinfo["auth"] = true;
 //  $smtpinfo["username"] = "indsoft@mail-b01.cloudmailbox.in";
@@ -87,7 +86,6 @@ require 'vendor/autoload.php';
 
   if (!$mail->send()){
     echo  "Fail to sent messagee";
-    echo  $mail;
   }
   else{
     echo "Message successfully sent!";

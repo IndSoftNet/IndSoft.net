@@ -49,7 +49,7 @@ require 'vendor/autoload.php';
  $mail->isHTML(false);
  $mail->Body = $body;
 
- echo  $mail;
+ echo  $Host;
 
 //  $host = "mail-b01.cloudmailbox.in";
 //  $smtpinfo["auth"] = true;

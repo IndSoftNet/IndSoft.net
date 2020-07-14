@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="eng">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IndSoft | A Cheaper, Faster way to Host your Application Online</title>
+
+    <meta name="author" content="Indsoft">
+    <meta name="description" content="Indsoft">
+    <meta name="keywords" content="Indsoft">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Awesome -->
+    <link href="assets/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- Plugin CSS -->
+    <link href="assets/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/default.css" rel="stylesheet">
+
+</head>
+<style>
+    .help-block {
+        font-size: 12px;
+        color: #ff0000;
+    }
+</style>
+
+<body>
+
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar header-nav fixed-top navbar-expand-lg">
+            <div class="container">
+                <!-- Navbar Band -->
+                <div class="navbar-brand">
+                    <a class="logo-white" href="index.html"><img src="assets/images/logo-white.png" title="" alt=""></a>
+                    <a class="logo-dark" href="index.html"><img src="assets/images/logo-dark.png" title="" alt=""></a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Top Menu -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <!--<li><a class="nav-link" href="#features">Features</a></li>
+                        <li><a class="nav-link" href="#benefits">Benefits</a></li>
+                        <li><a class="nav-link" href="#company">Company</a></li>
+                        <li><a class="nav-link" href="support.html">Support</a></li>
+                        <li><a class="nav-link" href="http://www.indsoft.info/my/contact.php">Contact Us</a></li>-->
+                        <li><a class="nav-link" href="https://www.indsoft.net/vps-hosting.htm">VPS Hosting</a></li>
+                        <li><a class="nav-link"
+                                href="https://www.indsoft.info/my/cart.php?a=add&domain=register">Register Domain
+                                Online</a></li>
+                        <li><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li><a class="nav-link" href="http://www.indsoft.info/my/clientarea.php">Login</a></li>
+                        <li><a class="nav-link-outline" href="http://www.indsoft.info/my/register.php">Sign Up</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Container -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!-- /Header End -->
+
+    <!-- Main Start -->
+
+    <!-- Page Title Hero Start -->
+    <section class="section page-title-section theme-g-bg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 offset-md-2">
+                    <div class="page-title text-center">
+                        <h1 class="font-alt">Contact IndSoft</h1>
+                        <p class="mb-4">Whether you have a question about trial, features, pricing, demo or anything
+                            else, our team is ready to answer all your questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Page Title Hero End -->
+
+    <!-- Contact Us Starts -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center m-55px-b md-m-55px-b">
+                <div class="col-md-12 col-lg-12">
+                    <div class="section-title text-left">
+                        <h2 class="theme-after-bg">Get In Touch Now</h2>
+                        <p class="text-left">Use the form below to drop us an email.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-md-7 col-lg-7">
+                    <div class="tab-style-2">
+                        <ul class="nav nav-tabs nav-justified" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-sales-tab" data-toggle="pill" href="#pills-sales"
+                                    role="tab" aria-controls="pills-sales" aria-selected="true">Sales Inquiries</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" id="pills-call-tab" data-toggle="pill" href="#pills-call" role="tab" aria-controls="pills-call" aria-selected="false">Request A Call</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-partner-tab" data-toggle="pill" href="#pills-partner" role="tab" aria-controls="pills-partner" aria-selected="false">Become A Partner</a>
+                            </li> -->
+                        </ul>
+                        <div class="tab-content tab-content-contactFrm" id="pills-tabContent">
+                            <div class="tab-pane fade active show" id="pills-sales" role="tabpanel"
+                                aria-labelledby="pills-sales-tab">
+                                <div class="col-xs-12 contact-form-wrap">
+                                    <p>Note: Please note that this inquiry form is solely for the purpose of sales
+                                        inquiries, and not for any technical support.</p>
+                                    <!-- TODO:Form -->
+                                    <!-- Contact form 1 -->
+                                    <form id="sales" name="sales"  data-toggle="validator" method="POST">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                    <input type="text" id="your_name" name="your-name"
+                                                        class="form-control" placeholder="Your Name"
+                                                        data-error="Name is required" required>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                    <input type="email" id="your_email" name="your-email"
+                                                        class="form-control" placeholder="Your Email"
+                                                        data-error="Email is required" required>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                    <input type="number" id="your_phone" name="your-phone"
+                                                        class="form-control" placeholder="Phone/Skype"
+                                                        data-error="Phone number is required" required  maxlength="10" size="10"  >
+                                                    <div class="help-block with-errors"></div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                    <input type="text" id="company_name" name="company-name"
+                                                        class="form-control" placeholder="Company Name"  data-error="Company is required" required>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                    <input type="text" id="website" name="website" class="form-control"
+                                                        placeholder="Website" data-error="Website is required" required>
+                                                    <div class="help-block with-errors"></div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                    <input type="text" id="pageviews" name="pageviews"
+                                                        class="form-control" placeholder="Monthly Pageviews" data-error="Pageview is required" required>
+                                                    <div class="help-block with-errors"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <select id="country" name="country" class="form-control"
+                                                         data-error="Country is required" required>
+                                                        <option value="" selected disabled>Select Country</option>
+                                                        <option value="Afghanistan">Afghanistan</option>
+                                                        <option value="Albania">Albania</option>
+                                                        <option value="Algeria">Algeria</option>
+                                                        <option value="Bangladesh">Bangladesh</option>
+                                                        <option value="Belarus">Belarus</option>
+                                                        <option value="Belgium">Belgium</option>
+                                                        <option value="Bulgaria">Bulgaria</option>
+                                                        <option value="China">China</option>
+                                                        <option value="Denmark">Denmark</option>
+                                                        <option value="France">France</option>
+                                                        <option value="Hong Kong">Hong Kong</option>
+                                                        <option value="India">India</option>
+                                                        <option value="Indonesia">Indonesia</option>
+                                                        <option value="Italy">Italy</option>
+                                                        <option value="Jamaica">Jamaica</option>
+                                                        <option value="Japan">Japan</option>
+                                                        <option value="Kenya">Kenya</option>
+                                                        <option value="Korea">Korea</option>
+                                                        <option value="Korea">Korea</option>
+                                                        <option value="Kuwait">Kuwait</option>
+                                                        <option value="Malaysia">Malaysia</option>
+                                                        <option value="Maldives">Maldives</option>
+                                                        <option value="Malta">Malta</option>
+                                                        <option value="Mexico">Mexico</option>
+                                                        <option value="Myanmar">Myanmar</option>
+                                                        <option value="Nigeria">Nigeria</option>
+                                                        <option value="Norway">Norway</option>
+                                                        <option value="Oman">Oman</option>
+                                                        <option value="Philippines">Philippines</option>
+                                                        <option value="Qatar">Qatar</option>
+                                                        <option value="Romania">Romania</option>
+                                                        <option value="Serbia">Serbia</option>
+                                                        <option value="South Africa">South Africa</option>
+                                                        <option value="Spain">Spain</option>
+                                                        <option value="Sri Lanka">Sri Lanka</option>
+                                                        <option value="Sweden">Sweden</option>
+                                                        <option value="Turkey">Turkey</option>
+                                                        <option value="Zimbabwe">Zimbabwe</option>
+                                                    </select>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <textarea id="your_message" name="your-message" class="form-control"
+                                                        cols="40" rows="5" maxlength="750"
+                                                        placeholder="Please describe your needs and requirements" data-error="Minimum 10 character is required" required data-minlength="10"></textarea>
+                                                    <div class="help-block with-errors"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <div class="g-recaptcha" data-sitekey="6LfK4q8ZAAAAAIIFdy-Jhfb3wFnUXvO4Q-JtLuyB" >
+                                                    </div>
+                                                    <span class="google_msg help-block"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div><button type="submit" id="sales_submit"
+                                                        class="m-btn btn-green">SUBMIT</button></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <h4 class="msg"></h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-xs-12 col-md-5 col-lg-5">
+                    <div class="contact-us-support-wrap">
+                        <article class="contact-us-spprt-txt">
+                            <h2>How Can We Help?</h2>
+                            <p class="text-left">Check out our customer-focused support resources. If you don’t find
+                                what you are looking for, fill out the contact form.</p>
+
+                        </article>
+
+                        <div class="contact-us-support-links-wrap">
+                            <a target="_blank" href="http://kb.indsoft.net/kb/root.aspx">
+                                <h3>Support Knowledgebase</h3>
+                                <p>Best For General Support, Guides on our Services.</p>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a target="_blank" href="https://www.indsoft.info/my/submitticket.php">
+                                <h3>Support Tickets</h3>
+                                <p>Average Response Time: 30 Min</p>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#">
+                                <h3>Phone Support</h3>
+                                <p class="mb-1">Provided Only to Enterprise Customer</p>
+                                <!-- <p>Call Us At <span style="font-weight:600;">000-000-0000</span></p> -->
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Contact Us End -->
+
+    <!-- Start Partners -->
+    <section class="section gray-bg">
+        <div class="container">
+            <div class="row">
+                <!-- start partner logo item -->
+                <div class="offset-lg-1 col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/ssae.png" alt="">
+                    </div>
+                </div>
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="0.4s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/microsoft.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-cente wow fadeInUp" data-wow-delay="0.6s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/pci.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="0.8s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/hippa.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/windows.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="offset-lg-1 col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp"
+                    data-wow-delay="1.2s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/intel.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1.4s">
+
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/dell.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1.6s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/cpanel.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="1.8s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/centos.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+                <!-- start partner logo item -->
+                <div class="col-6 col-lg-2 col-md-3 col-sm-4 text-center wow fadeInUp" data-wow-delay="2s">
+                    <div
+                        class="clients-list text-center d-flex align-items-center justify-content-center w-100 margin-20px-bottom">
+                        <img src="assets/images/partners/cisco.png" alt="">
+                    </div>
+                </div>
+                <!-- end partner logo item -->
+            </div>
+        </div>
+    </section>
+    <!-- /Partners End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+
+        <section class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-2 sm-m-10px-tb md-m-30px-b">
+                        <h4 class="font-alt">IndSoft Systems</h4>
+                        <p class="footer-text">We have developed a powerful platform to help you learn, create and grow.
+                            A World-class website hosting technology at a price nobody can beat.</p>
+                    </div>
+                    <!-- col -->
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 sm-m-10px-tb">
+                        <h4 class="font-alt">Product</h4>
+                        <ul class="fot-link">
+                            <li><a href="https://www.indsoft.net/vps-hosting.htm">VPS Hosting</a></li>
+                            <li><a href="https://www.indsoft.net/">Cloud Hosting</a></li>
+                            <li><a href="https://www.indsoft.net/dedicated_servers.htm">Dedicated Server</a></li>
+                            <li><a href="https://www.indsoft.info/my/cart.php?a=add&domain=register">Domain Name
+                                    Registration</a></li>
+                        </ul>
+                    </div>
+                    <!-- col -->
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 sm-m-10px-tb">
+                        <h4 class="font-alt">About Us</h4>
+                        <ul class="fot-link">
+                            <li><a href="https://www.indsoft.net/payment_options.htm">Payment Options</a></li>
+                            <li><a href="https://www.indsoft.net/network_detail.htm">Network/Data Center Info</a></li>
+                            <li><a href="https://www.indsoft.net/legal.htm">Legal Information</a></li>
+                            <li><a href="https://www.indsoft.net/privacy-policy.htm">Privacy Policy</a></li>
+                            <li><a href="https://www.indsoft.net/refund-policy.htm">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <!-- col -->
+
+                    <div class="col-sm-6 col-md-3 col-lg-2 sm-m-10px-tb">
+                        <h4 class="font-alt">Quick Links</h4>
+                        <ul class="fot-link">
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#company">Company</a></li>
+                            <li><a href="http://blog.indsoft.net/">Blog</a></li>
+                            <li><a target="_blank" href="http://kb.indsoft.net/kb/root.aspx">Knowledgebase</a></li>
+                            <!--<li><a href="contact-us.html">Support</a></li>-->
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- col -->
+
+                    <div class="col-sm-6 col-md-3 col-lg-2 sm-m-10px-tb">
+                        <h4 class="font-alt">Follow Us On</h4>
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="https://www.facebook.com/indsoft.net"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li><a class="twitter" href="https://twitter.com/IndSoftSystems"><i
+                                        class="fab fa-twitter"></i></a></li>
+                            <li><a class="linkedin" href="https://www.linkedin.com/company/indsoft-systems-pvt-ltd/"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- col -->
+
+                </div>
+
+                <div class="footer-copy">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Copyright © 2020 IndSoft Systems. All Rights Reserved.</p>
+                        </div>
+                        <!-- col -->
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- footer-copy -->
+
+            </div>
+            <!-- container -->
+        </section>
+    </footer>
+    <!-- /Footer End -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Plugins -->
+    <script src="assets/plugin/bootstrap/js/popper.min.js"></script>
+    <script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Validator -->
+    <script src="assets/js/validator.js"></script>
+
+    <!-- custom -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $(function() {
+            $('#sales').validator();
+
+            $('#sales_submit').on('click',function(){
+                if(grecaptcha.getResponse() == "") {
+                    $('.google_msg').text('reCaptch is required');
+                }else{
+                    $('.google_msg').hide();
+                    name = $('#your_name').val();
+                    email = $('#your_email').val();
+                    phone = $('#your_phone').val();
+                    company = $('#company_name').val();
+                    website = $('#website').val();
+                    pageviews = $('#pageviews').val();
+                    country = $('#country').val();
+                    message = $('#your_message').val();
+                    if(name != "" && email != "" && phone != "" && country != ""){
+                        $.ajax({
+                            type: 'POST',
+                            url: 'send.php',
+                            data: {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                company: company,
+                                website: website,
+                                pageviews: pageviews,
+                                country: country,
+                                message: message
+                            },
+                            success: function (data) {
+                                if(data == '"Message successfully sent!'){
+                                    $('.msg').text('Message successfully sent!');
+                                }
+                            }
+                        });
+                    }
+                }
+                
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

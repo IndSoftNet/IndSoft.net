@@ -12,9 +12,18 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
   //declare our variables
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $telephone = $_POST['phone'];
+	$name        = (isset($_POST['name'])?$_POST['name']:"");
+  $email       = (isset($_POST['email'])?$_POST['email']:"");
+  $telephone       = (isset($_POST['phone'])?$_POST['phone']:"");
+
+  $company_name        = (isset($_POST['company'])?$_POST['company']:"");
+  $website       = (isset($_POST['website'])?$_POST['website']:"");
+  $pageviews       = (isset($_POST['pageviews'])?$_POST['pageviews']:"");
+
+  $country        = (isset($_POST['country'])?$_POST['country']:"");
+  $message       = (isset($_POST['message'])?$_POST['message']:"");
+  
+
   $company_name = $_POST['company'];
   $website = $_POST['website'];
   $pageviews = $_POST['pageviews'];
@@ -50,6 +59,8 @@ require 'vendor/autoload.php';
  $mail->Subject = $subject;
  $mail->isHTML(false);
  $mail->Body = $body;
+ $mail->addReplyTo($email, $name);
+
 
  
 //  $host = "mail-b01.cloudmailbox.in";

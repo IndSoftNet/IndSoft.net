@@ -23,7 +23,7 @@ require 'vendor/autoload.php';
 
  $to = 'support@indsoft.net,mktg@indsoft.net'; 
  $from = $email;
- $subject = "Contact form filled on Cloud.IndSoft.net";
+ $subject = "Contact form filled on IndSoft.net";
  $body = "Hello $name,
   We received an email request!
   Name :- $name
@@ -44,7 +44,7 @@ require 'vendor/autoload.php';
  $mail->Username = 'indsoft@mail-b01.cloudmailbox.in';
  $mail->Password = 'Ind@mb01#$039';
  $mail->setFrom($email, $name);
- $mail->addAddress(' support@indsoft.net','mktg@indsoft.net','ssarveshchauhan@gmail.com');
+ $mail->addAddress(' support@indsoft.net','mktg@indsoft.net','anil@xinfin.org');
  $mail->Subject = $subject;
  $mail->isHTML(false);
  $mail->Body = $body;

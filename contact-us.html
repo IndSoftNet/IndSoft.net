@@ -529,7 +529,7 @@
                     message = $('#your_message').val();
                     if(name != "" && email != "" && phone != "" && country != ""){
                         $.ajax({
-                            type: 'POST',
+                            type: 'post',
                             url: 'send.php',
                             data: {
                                 name: name,

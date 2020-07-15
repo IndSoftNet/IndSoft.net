@@ -91,6 +91,6 @@ require 'vendor/autoload.php';
   }
   else{
     echo "Message successfully sent!";
-    // header("Location:https://Cloud.IndSoft.net/");
+    header("Location:https://IndSoft.net/");
   }
   ?>

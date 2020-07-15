@@ -529,7 +529,7 @@
                     message = $('#your_message').val();
                     if(name != "" && email != "" && phone != "" && country != ""){
                         $.ajax({
-                            type: 'post',
+                            type: 'POST',
                             url: 'send.php',
                             data: {
                                 name: name,
@@ -540,7 +540,7 @@
                                 pageviews: pageviews,
                                 country: country,
                                 message: message
-                            },
+                            }.serialize(),
                             success: function (data) {
                                 if(data == '"Message successfully sent!'){
                                     $('.msg').text('Message successfully sent!');

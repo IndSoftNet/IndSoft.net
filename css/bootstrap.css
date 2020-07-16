@@ -3636,7 +3636,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
+  /*min-height: 50px;*/
+  min-height: 44px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -3754,7 +3755,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: 15px;
   padding: 9px 10px;
   margin-top: 8px;
-  margin-bottom: 8px;
+  /*margin-bottom: 8px;*/
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3985,7 +3986,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e7e7e7;
+  /*border-color: #e7e7e7;*/
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,

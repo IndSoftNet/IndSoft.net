@@ -278,14 +278,14 @@ img {
   vertical-align: top;
   color: #fff;
   font-weight: 400;
-  letter-spacing: 0.050em;
+  letter-spacing: 0.05em;
 }
 
 .header-nav .navbar-nav-right .nav-link {
   background: #f8c222;
   border: 2px solid #f8c222;
   display: block;
-  padding: 5px 25px;
+  padding: 5px 12px;
   border-radius: 3px;
 }
 .header-nav .navbar-nav-right .nav-link:hover {
@@ -303,8 +303,10 @@ img {
   border: 2px solid #f8c222;
   letter-spacing: 0.100em;
   display: inline-block;
-  padding: 5px 25px;
+  padding: 5px 15px;
   border-radius: 3px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 .header-nav .navbar-nav-right .nav-link-outline:hover {
     background: #f8c222;
@@ -366,6 +368,12 @@ img {
   padding: 12px 10px;
   background: #FFFFFF;
   box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 991px) and (max-width: 1199px){
+.header-nav .navbar-nav > li {
+    margin: 0 0 0 15px;
+}
 }
 
 @media (max-width: 991px){
@@ -868,7 +876,7 @@ img {
 .feature-box-03 label {
   margin: 0;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 20px;  
 }
 
@@ -960,7 +968,7 @@ img {
     font-weight: 400;
     padding-bottom: 0px;
     line-height: 50px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 #enterprice-success {margin-top: -200px;padding:15px;background:#ffffff;border-radius:5px;box-shadow: 0px 30px 60px 0px rgba(38, 59, 94, 0.1);}

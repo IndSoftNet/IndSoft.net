@@ -282,7 +282,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <h4 class="msg"></h4>
+                                    <h4 class="msg text-danger text-center"></h4>
                                 </div>
                             </div>
 
@@ -512,12 +512,16 @@
     <script src="assets/js/custom.js"></script>
     <script>
         $(function() {
-            $('#sales').validator();
-
-            $('#sales_submit').on('click',function(){
-                if(grecaptcha.getResponse() == "") {
+            $('#sales').validator().on('submit', function (e) {
+                if (e.isDefaultPrevented()) {
+                    // alert('form is not valid');
+                }
+                else if(grecaptcha.getResponse() == "") {
+                    e.preventDefault();
                     $('.google_msg').text('reCaptch is required');
-                }else{
+                }
+                else{
+                    e.preventDefault();
                     $('.google_msg').hide();
                     name = $('#your_name').val();
                     email = $('#your_email').val();
@@ -540,10 +544,14 @@
                                 pageviews: pageviews,
                                 country: country,
                                 message: message
-                            }.serialize(),
+                            },
                             success: function (data) {
-                                if(data == '"Message successfully sent!'){
+                                if(data == "Message successfully sent!"){
+                                    $("#sales").trigger('reset');
                                     $('.msg').text('Message successfully sent!');
+                                }else{
+                                    $("#sales").trigger('reset');
+                                    $('.msg').text('Fail to sent');
                                 }
                             }
                         });

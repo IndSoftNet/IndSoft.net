@@ -61,7 +61,13 @@ require 'vendor/autoload.php';
  $mail->Body = $body;
  $mail->addReplyTo($email, $name);
 
-
+if (!$mail->send()){
+  echo  "Fail to sent messagee";
+}
+else{
+  echo "Message successfully sent!";
+  // header("Location:https://IndSoft.net/");
+}
  
 //  $host = "mail-b01.cloudmailbox.in";
 //  $smtpinfo["auth"] = true;
@@ -97,11 +103,5 @@ require 'vendor/autoload.php';
  //$mail->send($to, $headers, $body);
  // $mail = $smtp->send($to, $headers, $body);
 
-  if (!$mail->send()){
-    echo  "Fail to sent messagee";
-  }
-  else{
-    echo "Message successfully sent!";
-    header("Location:https://IndSoft.net/");
-  }
+ 
   ?>

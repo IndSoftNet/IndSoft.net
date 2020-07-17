@@ -79,7 +79,22 @@
     }    
 
     
-
+	/*--------------------
+        * Video Popup
+    ----------------------*/
+	INDSOFT.PopupVideo = function(){
+    $('.popup-video').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+      });
+    }
+	
+	
+	
     // Window on Load
     $(window).on("load", function(){
       INDSOFT.WebLoad();
@@ -89,7 +104,8 @@
         INDSOFT.MenuClose(),
         INDSOFT.HeaderScroll(),
 		INDSOFT.FooterScroll(),
-        INDSOFT.HeaderSticky();
+        INDSOFT.HeaderSticky(),
+		INDSOFT.PopupVideo();
     });
 
     $(window).on("scroll", function(){

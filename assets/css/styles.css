@@ -475,6 +475,73 @@ img {
 
 
 
+/***** Home Banner Video Modal *****/
+.modal-backdrop.show {
+	filter: alpha(opacity=0.8);
+	opacity: 0.8;
+}
+.modal.show {
+	padding-right: 0px!important;
+}
+.modal-content {
+	background: none;
+	border: 0;
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+}
+.modal-body {
+	/*padding: 0 25px 25px 25px;*/
+	padding: 0px;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.modal-header {
+	/*padding: 25px 25px 15px 25px;*/
+	padding: 0px;
+	text-align: right;
+}
+.modal-header, .modal-footer {
+	border: 0;
+}
+.modal-header .close {
+	padding: 0rem;
+	float: none;
+	margin: 0;
+	font-size: 26px;
+	width: 34px;
+    height: 34px;
+    line-height: 34px;
+	color: #fff;
+	font-weight: 300;
+	text-shadow: none;
+	opacity: 1;
+	outline: none;
+}
+.modal-header:before {display: table;content: " ";}
+.modal-dialog {
+    /*margin: 1.75rem auto;*/
+	margin: 1.50rem auto;
+    line-height: 0;
+    width: 100%;
+    max-width: 900px;
+}
+.embed-responsive {
+    border-radius: 4px;
+}
+@media (max-width: 900px) {
+.modal-dialog {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+}
+.overflow-scroll {
+    overflow: hidden!important;
+    overflow-y: scroll!important;
+}
+.npr {
+  padding-right: 0px!important;
+}
+/***** Home Banner Video Modal *****/
+
 
 @media (max-width: 767px){
   .home-banner h1 {

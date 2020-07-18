@@ -527,18 +527,21 @@ img {
 .embed-responsive {
     border-radius: 4px;
 }
-@media (max-width: 900px) {
-.modal-dialog {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-}
 .overflow-scroll {
     overflow: hidden!important;
     overflow-y: scroll!important;
 }
 .npr {
   padding-right: 0px!important;
+}
+.npr-10 {
+  padding-right: 10px!important;
+}
+@media (max-width: 900px) {
+.modal-dialog {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 }
 /***** Home Banner Video Modal *****/
 

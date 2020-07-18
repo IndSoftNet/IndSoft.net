@@ -87,8 +87,16 @@
 		e.preventDefault();
 		$( '#' + $(this).data('modal-id') ).modal();
 		$('body').addClass('npr');
+		$('.navbar').addClass('npr-10');
 	});
+	
+	$("#modal-video").on('hidden.bs.modal', function (e) {
+    	$("#modal-video iframe").attr("src", $("#modal-video iframe").attr("src"));
+	});
+	
     }
+	
+	
 	
 	
 	

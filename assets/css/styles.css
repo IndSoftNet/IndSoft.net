@@ -1100,6 +1100,14 @@ img {
     margin-bottom: 20px;
     text-align: left;
 }
+
+.what-we-offer-cards .vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+}
+
 .offer-card-1 {
     border-color: #004ddb;
 }
@@ -1115,7 +1123,12 @@ img {
     text-align:center;
 	line-height: 30px;
     font-weight: 400;
-    margin: 10px 0;
+    /*margin: 10px 0;*/
+	margin-bottom: 0rem;
+}
+
+@media (min-width: 768px) {
+
 }
 
 

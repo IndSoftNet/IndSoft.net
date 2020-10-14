@@ -2466,7 +2466,7 @@
 		border-bottom:1px solid #efefef !important;
 		border-right:0 solid #efefef !important;
 	}
-	.panel-title:after {
+	/*.panel-title:after {
 		content: "\f078";
 		color: #292723;
 		float:right;
@@ -2478,11 +2478,14 @@
 		position:relative;
 		line-height: 20px;
 		text-transform: none;
-	}
+	}*/
 	.panel-body h4 {
 		font-size: 16px;
 		margin: 10px 0 20px;
 		padding:0 !important;
+	}
+	.panel-body {
+		background: #FFFFFF!important;
 	}
 	.panel-body .form-control {
 		margin-bottom:0;
@@ -2498,8 +2501,9 @@
 	}
 	.panel-default > .panel-heading {
 		background-color: #FFFFFF;
-		padding:15px 20px;
-		border: 1px solid #A9A9A9;
+		padding:0px;
+		/*padding:15px 20px;
+		border: 1px solid #A9A9A9;*/
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px;
@@ -2509,11 +2513,61 @@
 		color:#222222 !important;
 	}
 	.panel-default > .panel-heading a {
+		font-family: 'Lato',sans-serif;
 		color: #222222;
 		font-size: 18px;
 		width: 100%;
 		display: block;
+		padding-right: 40px!important;
+		padding:15px 30px;
 	}
+	
+.panel-heading a.accordion-toggle{
+	color: #5688f9!important;
+}
+.panel-heading a.accordion-toggle:hover{
+    color: #5688f9!important;
+}
+.panel-heading a.accordion-toggle.collapsed{
+	color: #222222!important;
+}
+
+.panel-heading .accordion-toggle:after {
+    font-family: 'FontAwesome'; 
+    content: "\f077"; 
+    float: right; 
+    color: #5688f9;
+	position: absolute;
+	right: 15px;
+	top: calc(50% - 9px);
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    content: "\f078";
+	color: #ababab;
+}
+.panel-heading a.accordion-toggle.collapsed:before {
+    color: #ababab;
+}
+.panel-heading .accordion-toggle:before {
+	font-family: 'FontAwesome'; 
+    content: "\f111";
+    font-size: 8px;
+	color: #5688f9;
+	position: absolute;
+	left: 15px;
+	top: calc(50% - 10px);
+}
+.panel-group .panel-heading + .panel-collapse .panel-body {
+    border-top: 1px solid #f5f5f5!important;
+}
+.panel-body .accordion-inner {padding-left: 15px;}
+table.masterNodeRewards thead tr th {font-weight:700;background-color:rgba(158, 158, 158, 0.1);}
+table.masterNodeRewards tbody tr td:first-child {font-weight:600;background-color:rgba(158, 158, 158, 0.05);}
+@media (max-width: 768px) {table.masterNodeRewards tbody tr td:first-child {width: 175px!important;max-width: 175px!important;min-width: 175px!important;white-space: pre-wrap;}}
+
+
+
+
 	.stat {
 		text-align:center;
 	}
@@ -4069,6 +4123,7 @@
 
 @media (max-width: 991px){#header-style-1 .yamm img {height: 38px;}}
 		
+	.mt-0 {margin-top:0rem!important}
 	.mt-1 {margin-top:.25rem!important}
 	.mt-2 {margin-top:.5rem!important}
 	.mt-3 {margin-top:1rem!important}
@@ -4080,6 +4135,7 @@
 	.mt-9 {margin-top:9rem!important}
 	.mt-10 {margin-top:10rem!important}
 	
+	.mb-0 {margin-bottom:0rem!important}
 	.mb-1 {margin-bottom:.25rem!important}
 	.mb-2 {margin-bottom:.5rem!important}
 	.mb-3 {margin-bottom:1rem!important}
@@ -4091,7 +4147,7 @@
 	.mb-9 {margin-bottom:9rem!important}
 	.mb-10 {margin-bottom:10rem!important}
 	
-	
+	.pb-0 {padding-bottom:0rem!important}
 	
 	
 	
@@ -4296,3 +4352,17 @@
 }
 }
 /***** Video Modal *****/
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------
+			Testimonial Slider CSS
+------------------------------------------------*/
+.cd-testimonials-wrapper{position:relative;width:100%;max-width:100%;margin:0 auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:40px 0 70px;z-index:1}.cd-testimonials-wrapper h2{text-align:center;position:absolute;width:100%;top:60px;margin:0 auto}@media only screen and (min-width:768px){.cd-testimonials-wrapper h2{text-align:center;position:absolute;width:100%;top:100px;margin:0 auto}}.testimonial-content{/*max-width:1000px;*/width:100%;margin:0 auto 10px auto}.cd-testimonials{color:#82848b;text-align:center;list-style:none;padding:0;margin:0}.cd-testimonials>li{position:absolute;opacity:0}.cd-testimonials>li:first-child{position:relative;opacity:1}.testimonial-content p{font-style:italic;line-height:1.4;margin-bottom:1em;padding:0 14px}@media only screen and (min-width:768px){.testimonial-content p{font-size:16px;}}@media only screen and (min-width:1170px){.testimonial-content p{font-size:18px;line-height:1.6}}.cd-author-info span p{display:inline-block;font-size:14px;padding-left:0}.cd-author-info span p a{color:#7e8188}.cd-author .cd-author-info,.cd-author img{display:inline-block;vertical-align:top}.cd-author img{width:40px;height:40px;border-radius:50%;margin-right:5px}.cd-author .cd-author-info{text-align:left;line-height:1}.cd-author .cd-author-info li:first-child{font-size:14px;margin-top:4px}.cd-author .cd-author-info li:last-child{font-size:12px;color:#6b6b70}ul.cd-author-info{list-style:none}ul.cd-author-info li span:before{font-family:FontAwesome;content:'\f073';font-size:14px;display:inline-block;position:absolute;margin-top:2px;font-style:normal;margin-left:-25px}ul.cd-author-info li span{font-size:14px;padding-left:30px;line-height:24px;font-style:italic;font-weight:300}@media only screen and (min-width:768px){.cd-author img{width:58px;height:58px}.cd-author .cd-author-info{line-height:1.4}.cd-author .cd-author-info li:first-child{font-size:18px}}.flex-control-paging li a{width:6px;height:6px;display:block;background:#666;background:rgba(0,0,0,.25)!important;cursor:pointer;text-indent:-9999px;-webkit-box-shadow:inset 0 0 3px rgba(0,0,0,.3);-moz-box-shadow:inset 0 0 3px rgba(0,0,0,.3);-o-box-shadow:inset 0 0 3px rgba(0,0,0,.3);box-shadow:inset 0 0 3px rgba(0,0,0,.3);-webkit-border-radius:50px!important;-moz-border-radius:50px!important;-o-border-radius:50px!important;border-radius:50px!important}.flex-control-paging li a:hover{background:#333;background:rgba(0,0,0,.7)}.flex-control-paging li a.flex-active{background:#000;background:#02171f;cursor:default}.flex-control-nav{bottom:30px;position:absolute;margin:0 auto;padding:0;text-align:center;width:100%}.flex-control-nav li{display:inline-block;padding:0 5px 0 5px}@media screen and (max-width:767px){.flex-direction-nav a{width:30px}.flex-direction-nav a:before{visibility:hidden}.flex-direction-nav a:before{padding:14px 0 10px 0}.flex-direction-nav .flex-prev{left:0}.flex-direction-nav .flex-next{right:0;text-align:right}.flexslider:hover .flex-direction-nav .flex-prev{opacity:1;left:0}.flexslider:hover .flex-direction-nav .flex-prev:hover{opacity:1}.flexslider:hover .flex-direction-nav .flex-next{opacity:1;right:0}.flex-direction-nav{visibility:hidden}}
